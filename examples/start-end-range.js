@@ -209,7 +209,7 @@ var CalendarHeader = __WEBPACK_IMPORTED_MODULE_1_create_react_class___default()(
           className: prefixCls + '-day-select',
           role: 'button'
         },
-        value.format(locale.dayFormat)
+        value.format(props.jalaali ? locale.jDayFormat : locale.dayFormat)
       );
     }
     var my = [];
@@ -498,6 +498,11 @@ var DateTHead = function (_React$Component) {
           'x'
         )
       );
+    }
+
+    if (props.jalaali) {
+      weekDays.reverse();
+      veryShortWeekdays.reverse();
     }
     var weekDaysEls = weekDays.map(function (day, xindex) {
       return __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
@@ -789,7 +794,9 @@ var DateTBody = __WEBPACK_IMPORTED_MODULE_1_create_react_class___default()({
 
         passed++;
       }
-
+      if (props.jalaali) {
+        dateCells.reverse();
+      }
       tableHtml.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'tr',
         {
@@ -801,6 +808,7 @@ var DateTBody = __WEBPACK_IMPORTED_MODULE_1_create_react_class___default()({
         dateCells
       ));
     }
+
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'tbody',
       { className: prefixCls + '-tbody' },
@@ -1082,6 +1090,9 @@ var YearPanel = function (_React$Component) {
           )
         );
       });
+      if (props.jalaali) {
+        tds.reverse();
+      }
       return __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
         'tr',
         { key: index, role: 'row' },
@@ -1293,6 +1304,9 @@ var DecadePanel = function (_React$Component) {
           )
         );
       });
+      if (jalaali) {
+        tds.reverse();
+      }
       return __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
         'tr',
         { key: decadeIndex, role: 'row' },

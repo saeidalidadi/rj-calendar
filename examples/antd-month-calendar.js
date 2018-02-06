@@ -149,7 +149,7 @@ var CalendarHeader = __WEBPACK_IMPORTED_MODULE_1_create_react_class___default()(
           className: prefixCls + '-day-select',
           role: 'button'
         },
-        value.format(locale.dayFormat)
+        value.format(props.jalaali ? locale.jDayFormat : locale.dayFormat)
       );
     }
     var my = [];
@@ -991,6 +991,9 @@ var YearPanel = function (_React$Component) {
           )
         );
       });
+      if (props.jalaali) {
+        tds.reverse();
+      }
       return __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
         'tr',
         { key: index, role: 'row' },
@@ -1202,6 +1205,9 @@ var DecadePanel = function (_React$Component) {
           )
         );
       });
+      if (jalaali) {
+        tds.reverse();
+      }
       return __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
         'tr',
         { key: decadeIndex, role: 'row' },
