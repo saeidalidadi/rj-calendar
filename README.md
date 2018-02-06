@@ -10,7 +10,7 @@ React Calendar
 [![npm download][download-image]][download-url]
 
 [npm-image]: http://img.shields.io/npm/v/rc-calendar.svg?style=flat-square
-[npm-url]: http://npmjs.org/package/rc-calendar
+[npm-url]: http://npmjs.org/package/rj-calendar
 [travis-image]: https://img.shields.io/travis/react-component/calendar.svg?style=flat-square
 [travis-url]: https://travis-ci.org/react-component/calendar
 [codecov-image]: https://img.shields.io/codecov/c/github/react-component/calendar/master.svg?style=flat-square
@@ -20,7 +20,7 @@ React Calendar
 [node-image]: https://img.shields.io/badge/node.js-%3E=_0.10-green.svg?style=flat-square
 [node-url]: http://nodejs.org/download/
 [download-image]: https://img.shields.io/npm/dm/rc-calendar.svg?style=flat-square
-[download-url]: https://npmjs.org/package/rc-calendar
+[download-url]: https://npmjs.org/package/rj-calendar
 
 ## Screenshots
 
@@ -58,7 +58,7 @@ React Calendar
 ## Usage
 
 ```js
-import Calendar from 'rc-calendar';
+import Calendar from 'rj-calendar';
 import React from 'react';
 import ReactDOM from 'react-dom';
 ReactDOM.render(<Calendar />, container);
@@ -81,7 +81,7 @@ http://saeidalidadi.github.io/rj-calendar/examples/index.html
 
 ## API
 
-### rc-calendar props
+### rj-calendar props
 
 <table class="table table-bordered table-striped">
     <thead>
@@ -242,7 +242,7 @@ http://saeidalidadi.github.io/rj-calendar/examples/index.html
 </table>
 
 
-### rc-calendar/lib/RangeCalendar props
+### rj-calendar/lib/RangeCalendar props
 
 <table class="table table-bordered table-striped">
     <thead>
@@ -419,7 +419,7 @@ http://saeidalidadi.github.io/rj-calendar/examples/index.html
     </tbody>
 </table>
 
-### rc-calendar/lib/MonthCalendar props
+### rj-calendar/lib/MonthCalendar props
 
 <table class="table table-bordered table-striped">
     <thead>
@@ -513,7 +513,7 @@ http://saeidalidadi.github.io/rj-calendar/examples/index.html
     </tbody>
 </table>
 
-### rc-calendar/lib/Picker props
+### rj-calendar/lib/Picker props
 
 <table class="table table-bordered table-striped">
     <thead>
@@ -606,7 +606,7 @@ http://saeidalidadi.github.io/rj-calendar/examples/index.html
     </tbody>
 </table>
 
-### rc-calendar/lib/FullCalendar props
+### rj-calendar/lib/FullCalendar props
 
 <table class="table table-bordered table-striped">
     <thead>
@@ -715,4 +715,4 @@ open coverage/ dir
 
 ## License
 
-rc-calendar is released under the MIT license.
+rj-calendar is released under the MIT license.
