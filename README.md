@@ -1,4 +1,4 @@
-# rc-calendar
+# rj-calendar
 ---
 
 React Calendar
@@ -53,7 +53,7 @@ React Calendar
 
 ## install
 
-[![rc-calendar](https://nodei.co/npm/rc-calendar.png)](https://npmjs.org/package/rc-calendar)
+[![rj-calendar](https://nodei.co/npm/rj-calendar.png)](https://npmjs.org/package/rc-calendar)
 
 ## Usage
 
@@ -77,7 +77,7 @@ http://localhost:8002/examples/
 
 online example:
 
-http://react-component.github.io/calendar/examples/index.html
+http://saeidalidadi.github.io/rj-calendar/examples/index.html
 
 ## API
 
