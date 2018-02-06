@@ -1,15 +1,15 @@
 /* eslint react/no-multi-comp:0, no-console:0 */
 
-import 'rc-calendar/assets/index.less';
+import 'rj-calendar/assets/index.less';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import FullCalendar from 'rc-calendar/src/FullCalendar';
+import FullCalendar from 'rj-calendar/src/FullCalendar';
 
 import 'rc-select/assets/index.css';
 import Select from 'rc-select';
 
-import zhCN from 'rc-calendar/src/locale/zh_CN';
-import enUS from 'rc-calendar/src/locale/en_US';
+import zhCN from 'rj-calendar/src/locale/zh_CN';
+import enUS from 'rj-calendar/src/locale/en_US';
 
 import moment from 'moment';
 import 'moment/locale/zh-cn';

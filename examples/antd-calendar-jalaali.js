@@ -1,12 +1,12 @@
 /* eslint react/no-multi-comp:0, no-console:0 */
 
-import 'rc-calendar/assets/index.less';
+import 'rj-calendar/assets/index.less';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import Calendar from 'rc-calendar';
-import DatePicker from 'rc-calendar/src/Picker';
-import faIR from 'rc-calendar/src/locale/fa_IR';
+import Calendar from 'rj-calendar';
+import DatePicker from 'rj-calendar/src/Picker';
+import faIR from 'rj-calendar/src/locale/fa_IR';
 import 'rc-time-picker/assets/index.css';
 import TimePickerPanel from 'rc-time-picker/lib/Panel';
 import momentJalaali from 'moment-jalaali';

@@ -35,7 +35,7 @@
   "config": {
     "port": 8002,
     "entry": {
-      "rc-calendar": [
+      "rj-calendar": [
         "./assets/index.less",
         "./src/index.js"
       ]
