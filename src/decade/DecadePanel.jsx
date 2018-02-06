@@ -92,6 +92,9 @@ class DecadePanel extends React.Component {
           </a>
         </td>);
       });
+      if (jalaali) {
+        tds.reverse();
+      }
       return (<tr key={decadeIndex} role="row">{tds}</tr>);
     });
 

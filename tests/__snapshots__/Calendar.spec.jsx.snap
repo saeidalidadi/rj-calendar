@@ -87,56 +87,12 @@ exports[`Calendar Jalaali calendar render as jalaali 1`] = `
               <th
                 class="rc-calendar-column-header"
                 role="columnheader"
-                title="شنبه"
+                title="جمعه"
               >
                 <span
                   class="rc-calendar-column-header-inner"
                 >
-                  ش
-                </span>
-              </th>
-              <th
-                class="rc-calendar-column-header"
-                role="columnheader"
-                title="یک‌شنبه"
-              >
-                <span
-                  class="rc-calendar-column-header-inner"
-                >
-                  ی
-                </span>
-              </th>
-              <th
-                class="rc-calendar-column-header"
-                role="columnheader"
-                title="دوشنبه"
-              >
-                <span
-                  class="rc-calendar-column-header-inner"
-                >
-                  د
-                </span>
-              </th>
-              <th
-                class="rc-calendar-column-header"
-                role="columnheader"
-                title="سه‌شنبه"
-              >
-                <span
-                  class="rc-calendar-column-header-inner"
-                >
-                  س
-                </span>
-              </th>
-              <th
-                class="rc-calendar-column-header"
-                role="columnheader"
-                title="چهارشنبه"
-              >
-                <span
-                  class="rc-calendar-column-header-inner"
-                >
-                  چ
+                  ج
                 </span>
               </th>
               <th
@@ -153,12 +109,56 @@ exports[`Calendar Jalaali calendar render as jalaali 1`] = `
               <th
                 class="rc-calendar-column-header"
                 role="columnheader"
-                title="جمعه"
+                title="چهارشنبه"
               >
                 <span
                   class="rc-calendar-column-header-inner"
                 >
-                  ج
+                  چ
+                </span>
+              </th>
+              <th
+                class="rc-calendar-column-header"
+                role="columnheader"
+                title="سه‌شنبه"
+              >
+                <span
+                  class="rc-calendar-column-header-inner"
+                >
+                  س
+                </span>
+              </th>
+              <th
+                class="rc-calendar-column-header"
+                role="columnheader"
+                title="دوشنبه"
+              >
+                <span
+                  class="rc-calendar-column-header-inner"
+                >
+                  د
+                </span>
+              </th>
+              <th
+                class="rc-calendar-column-header"
+                role="columnheader"
+                title="یک‌شنبه"
+              >
+                <span
+                  class="rc-calendar-column-header-inner"
+                >
+                  ی
+                </span>
+              </th>
+              <th
+                class="rc-calendar-column-header"
+                role="columnheader"
+                title="شنبه"
+              >
+                <span
+                  class="rc-calendar-column-header-inner"
+                >
+                  ش
                 </span>
               </th>
             </tr>
@@ -173,66 +173,14 @@ exports[`Calendar Jalaali calendar render as jalaali 1`] = `
               <td
                 class="rc-calendar-cell"
                 role="gridcell"
-                title="۲۸ اسفند ۱۳۹۵"
+                title="۴ فروردین ۱۳۹۶"
               >
                 <div
                   aria-disabled="false"
                   aria-selected="false"
                   class="rc-calendar-date"
                 >
-                  28
-                </div>
-              </td>
-              <td
-                class="rc-calendar-cell"
-                role="gridcell"
-                title="۲۹ اسفند ۱۳۹۵"
-              >
-                <div
-                  aria-disabled="false"
-                  aria-selected="false"
-                  class="rc-calendar-date"
-                >
-                  29
-                </div>
-              </td>
-              <td
-                class="rc-calendar-cell"
-                role="gridcell"
-                title="۳۰ اسفند ۱۳۹۵"
-              >
-                <div
-                  aria-disabled="false"
-                  aria-selected="false"
-                  class="rc-calendar-date"
-                >
-                  30
-                </div>
-              </td>
-              <td
-                class="rc-calendar-cell"
-                role="gridcell"
-                title="۱ فروردین ۱۳۹۶"
-              >
-                <div
-                  aria-disabled="false"
-                  aria-selected="false"
-                  class="rc-calendar-date"
-                >
-                  1
-                </div>
-              </td>
-              <td
-                class="rc-calendar-cell"
-                role="gridcell"
-                title="۲ فروردین ۱۳۹۶"
-              >
-                <div
-                  aria-disabled="false"
-                  aria-selected="false"
-                  class="rc-calendar-date"
-                >
-                  2
+                  4
                 </div>
               </td>
               <td
@@ -251,14 +199,66 @@ exports[`Calendar Jalaali calendar render as jalaali 1`] = `
               <td
                 class="rc-calendar-cell"
                 role="gridcell"
-                title="۴ فروردین ۱۳۹۶"
+                title="۲ فروردین ۱۳۹۶"
               >
                 <div
                   aria-disabled="false"
                   aria-selected="false"
                   class="rc-calendar-date"
                 >
-                  4
+                  2
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۱ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  1
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۳۰ اسفند ۱۳۹۵"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  30
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۲۹ اسفند ۱۳۹۵"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  29
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۲۸ اسفند ۱۳۹۵"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  28
                 </div>
               </td>
             </tr>
@@ -269,53 +269,27 @@ exports[`Calendar Jalaali calendar render as jalaali 1`] = `
               <td
                 class="rc-calendar-cell"
                 role="gridcell"
-                title="۵ فروردین ۱۳۹۶"
+                title="۱۱ فروردین ۱۳۹۶"
               >
                 <div
                   aria-disabled="false"
                   aria-selected="false"
                   class="rc-calendar-date"
                 >
-                  5
+                  11
                 </div>
               </td>
               <td
                 class="rc-calendar-cell"
                 role="gridcell"
-                title="۶ فروردین ۱۳۹۶"
+                title="۱۰ فروردین ۱۳۹۶"
               >
                 <div
                   aria-disabled="false"
                   aria-selected="false"
                   class="rc-calendar-date"
                 >
-                  6
-                </div>
-              </td>
-              <td
-                class="rc-calendar-cell"
-                role="gridcell"
-                title="۷ فروردین ۱۳۹۶"
-              >
-                <div
-                  aria-disabled="false"
-                  aria-selected="false"
-                  class="rc-calendar-date"
-                >
-                  7
-                </div>
-              </td>
-              <td
-                class="rc-calendar-cell"
-                role="gridcell"
-                title="۸ فروردین ۱۳۹۶"
-              >
-                <div
-                  aria-disabled="false"
-                  aria-selected="false"
-                  class="rc-calendar-date"
-                >
-                  8
+                  10
                 </div>
               </td>
               <td
@@ -334,27 +308,53 @@ exports[`Calendar Jalaali calendar render as jalaali 1`] = `
               <td
                 class="rc-calendar-cell"
                 role="gridcell"
-                title="۱۰ فروردین ۱۳۹۶"
+                title="۸ فروردین ۱۳۹۶"
               >
                 <div
                   aria-disabled="false"
                   aria-selected="false"
                   class="rc-calendar-date"
                 >
-                  10
+                  8
                 </div>
               </td>
               <td
                 class="rc-calendar-cell"
                 role="gridcell"
-                title="۱۱ فروردین ۱۳۹۶"
+                title="۷ فروردین ۱۳۹۶"
               >
                 <div
                   aria-disabled="false"
                   aria-selected="false"
                   class="rc-calendar-date"
                 >
-                  11
+                  7
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۶ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  6
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۵ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  5
                 </div>
               </td>
             </tr>
@@ -365,66 +365,14 @@ exports[`Calendar Jalaali calendar render as jalaali 1`] = `
               <td
                 class="rc-calendar-cell rc-calendar-next-month-btn-day"
                 role="gridcell"
-                title="۱۲ فروردین ۱۳۹۶"
+                title="۱۸ فروردین ۱۳۹۶"
               >
                 <div
                   aria-disabled="false"
                   aria-selected="false"
                   class="rc-calendar-date"
                 >
-                  12
-                </div>
-              </td>
-              <td
-                class="rc-calendar-cell rc-calendar-next-month-btn-day"
-                role="gridcell"
-                title="۱۳ فروردین ۱۳۹۶"
-              >
-                <div
-                  aria-disabled="false"
-                  aria-selected="false"
-                  class="rc-calendar-date"
-                >
-                  13
-                </div>
-              </td>
-              <td
-                class="rc-calendar-cell rc-calendar-next-month-btn-day"
-                role="gridcell"
-                title="۱۴ فروردین ۱۳۹۶"
-              >
-                <div
-                  aria-disabled="false"
-                  aria-selected="false"
-                  class="rc-calendar-date"
-                >
-                  14
-                </div>
-              </td>
-              <td
-                class="rc-calendar-cell rc-calendar-next-month-btn-day"
-                role="gridcell"
-                title="۱۵ فروردین ۱۳۹۶"
-              >
-                <div
-                  aria-disabled="false"
-                  aria-selected="false"
-                  class="rc-calendar-date"
-                >
-                  15
-                </div>
-              </td>
-              <td
-                class="rc-calendar-cell rc-calendar-next-month-btn-day"
-                role="gridcell"
-                title="۱۶ فروردین ۱۳۹۶"
-              >
-                <div
-                  aria-disabled="false"
-                  aria-selected="false"
-                  class="rc-calendar-date"
-                >
-                  16
+                  18
                 </div>
               </td>
               <td
@@ -443,14 +391,66 @@ exports[`Calendar Jalaali calendar render as jalaali 1`] = `
               <td
                 class="rc-calendar-cell rc-calendar-next-month-btn-day"
                 role="gridcell"
-                title="۱۸ فروردین ۱۳۹۶"
+                title="۱۶ فروردین ۱۳۹۶"
               >
                 <div
                   aria-disabled="false"
                   aria-selected="false"
                   class="rc-calendar-date"
                 >
-                  18
+                  16
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۱۵ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  15
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۱۴ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  14
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۱۳ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  13
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۱۲ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  12
                 </div>
               </td>
             </tr>
@@ -461,66 +461,14 @@ exports[`Calendar Jalaali calendar render as jalaali 1`] = `
               <td
                 class="rc-calendar-cell rc-calendar-next-month-btn-day"
                 role="gridcell"
-                title="۱۹ فروردین ۱۳۹۶"
+                title="۲۵ فروردین ۱۳۹۶"
               >
                 <div
                   aria-disabled="false"
                   aria-selected="false"
                   class="rc-calendar-date"
                 >
-                  19
-                </div>
-              </td>
-              <td
-                class="rc-calendar-cell rc-calendar-next-month-btn-day"
-                role="gridcell"
-                title="۲۰ فروردین ۱۳۹۶"
-              >
-                <div
-                  aria-disabled="false"
-                  aria-selected="false"
-                  class="rc-calendar-date"
-                >
-                  20
-                </div>
-              </td>
-              <td
-                class="rc-calendar-cell rc-calendar-next-month-btn-day"
-                role="gridcell"
-                title="۲۱ فروردین ۱۳۹۶"
-              >
-                <div
-                  aria-disabled="false"
-                  aria-selected="false"
-                  class="rc-calendar-date"
-                >
-                  21
-                </div>
-              </td>
-              <td
-                class="rc-calendar-cell rc-calendar-next-month-btn-day"
-                role="gridcell"
-                title="۲۲ فروردین ۱۳۹۶"
-              >
-                <div
-                  aria-disabled="false"
-                  aria-selected="false"
-                  class="rc-calendar-date"
-                >
-                  22
-                </div>
-              </td>
-              <td
-                class="rc-calendar-cell rc-calendar-next-month-btn-day"
-                role="gridcell"
-                title="۲۳ فروردین ۱۳۹۶"
-              >
-                <div
-                  aria-disabled="false"
-                  aria-selected="false"
-                  class="rc-calendar-date"
-                >
-                  23
+                  25
                 </div>
               </td>
               <td
@@ -539,14 +487,66 @@ exports[`Calendar Jalaali calendar render as jalaali 1`] = `
               <td
                 class="rc-calendar-cell rc-calendar-next-month-btn-day"
                 role="gridcell"
-                title="۲۵ فروردین ۱۳۹۶"
+                title="۲۳ فروردین ۱۳۹۶"
               >
                 <div
                   aria-disabled="false"
                   aria-selected="false"
                   class="rc-calendar-date"
                 >
-                  25
+                  23
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۲۲ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  22
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۲۱ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  21
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۲۰ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  20
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۱۹ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  19
                 </div>
               </td>
             </tr>
@@ -557,66 +557,14 @@ exports[`Calendar Jalaali calendar render as jalaali 1`] = `
               <td
                 class="rc-calendar-cell rc-calendar-next-month-btn-day"
                 role="gridcell"
-                title="۲۶ فروردین ۱۳۹۶"
+                title="۱ اردیبهشت ۱۳۹۶"
               >
                 <div
                   aria-disabled="false"
                   aria-selected="false"
                   class="rc-calendar-date"
                 >
-                  26
-                </div>
-              </td>
-              <td
-                class="rc-calendar-cell rc-calendar-next-month-btn-day"
-                role="gridcell"
-                title="۲۷ فروردین ۱۳۹۶"
-              >
-                <div
-                  aria-disabled="false"
-                  aria-selected="false"
-                  class="rc-calendar-date"
-                >
-                  27
-                </div>
-              </td>
-              <td
-                class="rc-calendar-cell rc-calendar-next-month-btn-day"
-                role="gridcell"
-                title="۲۸ فروردین ۱۳۹۶"
-              >
-                <div
-                  aria-disabled="false"
-                  aria-selected="false"
-                  class="rc-calendar-date"
-                >
-                  28
-                </div>
-              </td>
-              <td
-                class="rc-calendar-cell rc-calendar-next-month-btn-day"
-                role="gridcell"
-                title="۲۹ فروردین ۱۳۹۶"
-              >
-                <div
-                  aria-disabled="false"
-                  aria-selected="false"
-                  class="rc-calendar-date"
-                >
-                  29
-                </div>
-              </td>
-              <td
-                class="rc-calendar-cell rc-calendar-next-month-btn-day"
-                role="gridcell"
-                title="۳۰ فروردین ۱۳۹۶"
-              >
-                <div
-                  aria-disabled="false"
-                  aria-selected="false"
-                  class="rc-calendar-date"
-                >
-                  30
+                  1
                 </div>
               </td>
               <td
@@ -635,14 +583,66 @@ exports[`Calendar Jalaali calendar render as jalaali 1`] = `
               <td
                 class="rc-calendar-cell rc-calendar-next-month-btn-day"
                 role="gridcell"
-                title="۱ اردیبهشت ۱۳۹۶"
+                title="۳۰ فروردین ۱۳۹۶"
               >
                 <div
                   aria-disabled="false"
                   aria-selected="false"
                   class="rc-calendar-date"
                 >
-                  1
+                  30
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۲۹ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  29
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۲۸ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  28
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۲۷ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  27
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۲۶ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  26
                 </div>
               </td>
             </tr>
@@ -653,66 +653,14 @@ exports[`Calendar Jalaali calendar render as jalaali 1`] = `
               <td
                 class="rc-calendar-cell rc-calendar-next-month-btn-day"
                 role="gridcell"
-                title="۲ اردیبهشت ۱۳۹۶"
+                title="۸ اردیبهشت ۱۳۹۶"
               >
                 <div
                   aria-disabled="false"
                   aria-selected="false"
                   class="rc-calendar-date"
                 >
-                  2
-                </div>
-              </td>
-              <td
-                class="rc-calendar-cell rc-calendar-next-month-btn-day"
-                role="gridcell"
-                title="۳ اردیبهشت ۱۳۹۶"
-              >
-                <div
-                  aria-disabled="false"
-                  aria-selected="false"
-                  class="rc-calendar-date"
-                >
-                  3
-                </div>
-              </td>
-              <td
-                class="rc-calendar-cell rc-calendar-next-month-btn-day"
-                role="gridcell"
-                title="۴ اردیبهشت ۱۳۹۶"
-              >
-                <div
-                  aria-disabled="false"
-                  aria-selected="false"
-                  class="rc-calendar-date"
-                >
-                  4
-                </div>
-              </td>
-              <td
-                class="rc-calendar-cell rc-calendar-next-month-btn-day"
-                role="gridcell"
-                title="۵ اردیبهشت ۱۳۹۶"
-              >
-                <div
-                  aria-disabled="false"
-                  aria-selected="false"
-                  class="rc-calendar-date"
-                >
-                  5
-                </div>
-              </td>
-              <td
-                class="rc-calendar-cell rc-calendar-next-month-btn-day"
-                role="gridcell"
-                title="۶ اردیبهشت ۱۳۹۶"
-              >
-                <div
-                  aria-disabled="false"
-                  aria-selected="false"
-                  class="rc-calendar-date"
-                >
-                  6
+                  8
                 </div>
               </td>
               <td
@@ -731,14 +679,66 @@ exports[`Calendar Jalaali calendar render as jalaali 1`] = `
               <td
                 class="rc-calendar-cell rc-calendar-next-month-btn-day"
                 role="gridcell"
-                title="۸ اردیبهشت ۱۳۹۶"
+                title="۶ اردیبهشت ۱۳۹۶"
               >
                 <div
                   aria-disabled="false"
                   aria-selected="false"
                   class="rc-calendar-date"
                 >
-                  8
+                  6
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۵ اردیبهشت ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  5
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۴ اردیبهشت ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  4
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۳ اردیبهشت ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  3
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۲ اردیبهشت ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  2
                 </div>
               </td>
             </tr>

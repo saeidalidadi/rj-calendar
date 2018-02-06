@@ -16,6 +16,7 @@ export default {
   dateFormat: 'M/D/YYYY',
   jDateFormat: 'jYYYY/jM/jD',
   dayFormat: 'D',
+  jDayFormat: 'jD',
   dateTimeFormat: 'M/D/YYYY HH:mm:ss',
   jDateTimeFormat: 'jYYYY/jM/jD HH:mm:ss',
   monthBeforeYear: true,

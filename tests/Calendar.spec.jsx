@@ -536,5 +536,39 @@ describe('Calendar', () => {
       );
       expect(faWrapper).toMatchSnapshot();
     });
+
+    it('today button in jalaali', () => {
+      const selected = momentJalaali().add(1, 'day').utcOffset(480);
+      const calendar = mount(
+        <Calendar jalaali defaultValue={momentJalaali()} defaultSelectedValue={selected} />
+      );
+      calendar.find('.rc-calendar-today-btn').simulate('click');
+      expect(momentJalaali().isSame(calendar.state().selectedValue)).toBe(true);
+    });
+
+    it('Sequence for jalaali system', () => {
+      const selected = momentJalaali();
+      momentJalaali.loadPersian({ usePersianDigits: true, dialect: 'persian-modern' });
+      const calendar = mount(
+        <Calendar
+          jalaali
+          locale={faIR}
+          defaultValue={momentJalaali()}
+          defaultSelectedValue={selected}
+        />
+      );
+      const lastWeekDayShort = calendar.find('.rc-calendar-column-header-inner').first().text();
+      expect(lastWeekDayShort).toBe('ج');
+
+      const firstWeekDayShort = calendar.find('.rc-calendar-column-header-inner').last().text();
+      expect(firstWeekDayShort).toBe('ش');
+
+      calendar.find('.rc-calendar-year-select').simulate('click');
+      const yearRow = calendar.find('.rc-calendar-year-panel-tbody').children().first();
+      const years = yearRow.find('.rc-calendar-year-panel-cell');
+      const leftYear = years.first().find('a').text();
+      const rightYear = years.last().find('a').text();
+      expect(Number(leftYear - 2)).toBe(Number(rightYear));
+    });
   });
 });

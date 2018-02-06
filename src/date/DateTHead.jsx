@@ -30,6 +30,11 @@ class DateTHead extends React.Component {
           <span className={`${prefixCls}-column-header-inner`}>x</span>
         </th>);
     }
+
+    if (props.jalaali) {
+      weekDays.reverse();
+      veryShortWeekdays.reverse();
+    }
     const weekDaysEls = weekDays.map((day, xindex) => {
       return (
         <th

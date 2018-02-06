@@ -106,7 +106,7 @@ const CalendarHeader = createReactClass({
         className={`${prefixCls}-day-select`}
         role="button"
       >
-        {value.format(locale.dayFormat)}
+        {value.format(props.jalaali ? locale.jDayFormat : locale.dayFormat)}
       </a>);
     }
     let my = [];
