@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>antd-range-calendar.js - example - rj-calendar@9.5.0</title>
+  <title>antd-calendar-jalaali.js - example - rj-calendar@9.5.0</title>
   <meta name="viewport"
         content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <meta charset="utf-8"/>
@@ -257,7 +257,7 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
     document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
   }
   </script>
-  <link rel="stylesheet" href="../common.css" /><link rel="stylesheet" href="antd-range-calendar.css" />
+  <link rel="stylesheet" href="../common.css" /><link rel="stylesheet" href="antd-calendar-jalaali.css" />
 </head>
 
 <body>
@@ -271,200 +271,239 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 
     <div class="highlight"><pre><code language="undefined">/* eslint react/no-multi-comp:0, no-console:0 */
 
+import 'rj-calendar/assets/index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Picker from 'rj-calendar/lib/Picker';
-import RangeCalendar from 'rj-calendar/lib/RangeCalendar';
-import zhCN from 'rj-calendar/lib/locale/zh_CN';
-import enUS from 'rj-calendar/lib/locale/en_US';
-import TimePickerPanel from 'rc-time-picker/lib/Panel';
-import 'rj-calendar/assets/index.css';
+import PropTypes from 'prop-types';
+import Calendar from 'rj-calendar';
+import DatePicker from 'rj-calendar/lib/Picker';
+import faIR from 'rj-calendar/lib/locale/fa_IR';
 import 'rc-time-picker/assets/index.css';
+import TimePickerPanel from 'rc-time-picker/lib/Panel';
+import momentJalaali from 'moment-jalaali';
 
-import moment from 'moment';
-import 'moment/locale/zh-cn';
-import 'moment/locale/en-gb';
 
-const cn = location.search.indexOf('cn') !== -1;
+momentJalaali.loadPersian({ usePersianDigits: true, dialect: 'persian-modern' });
 
-if (cn) {
-  moment.locale('zh-cn');
-} else {
-  moment.locale('en-gb');
+
+const format = 'jYYYY/jMM/jDD HH:mm:ss';
+
+const now = momentJalaali();
+
+function getFormat(time) {
+  return time ? format : 'jYYYY/jMM/jDD';
 }
 
-const now = moment();
-if (cn) {
-  now.utcOffset(8);
-} else {
-  now.utcOffset(0);
-}
 
 const defaultCalendarValue = now.clone();
-defaultCalendarValue.add(-1, 'month');
+defaultCalendarValue.add(-1, 'jMonth');
 
-const timePickerElement = (
-  &lt;TimePickerPanel
-    defaultValue={[moment('00:00:00', 'HH:mm:ss'), moment('23:59:59', 'HH:mm:ss')]}
-  /&gt;
-);
 
-function newArray(start, end) {
-  const result = [];
-  for (let i = start; i &lt; end; i++) {
-    result.push(i);
-  }
-  return result;
-}
+const timePickerElement = &lt;TimePickerPanel defaultValue={momentJalaali('00:00:00', 'HH:mm:ss')} /&gt;;
 
-function disabledDate(current) {
-  const date = moment();
-  date.hour(0);
-  date.minute(0);
-  date.second(0);
-  return current.isBefore(date);  // can not select days before today
-}
-
-function disabledTime(time, type) {
-  console.log('disabledTime', time, type);
-  if (type === 'start') {
+function disabledTime(date) {
+  console.log('disabledTime', date);
+  if (date &amp;&amp; (date.date() === 15)) {
     return {
       disabledHours() {
-        const hours = newArray(0, 60);
-        hours.splice(20, 4);
-        return hours;
-      },
-      disabledMinutes(h) {
-        if (h === 20) {
-          return newArray(0, 31);
-        } else if (h === 23) {
-          return newArray(30, 60);
-        }
-        return [];
-      },
-      disabledSeconds() {
-        return [55, 56];
+        return [3, 4];
       },
     };
   }
   return {
     disabledHours() {
-      const hours = newArray(0, 60);
-      hours.splice(2, 6);
-      return hours;
-    },
-    disabledMinutes(h) {
-      if (h === 20) {
-        return newArray(0, 31);
-      } else if (h === 23) {
-        return newArray(30, 60);
-      }
-      return [];
-    },
-    disabledSeconds() {
-      return [55, 56];
+      return [1, 2];
     },
   };
 }
 
-const formatStr = 'YYYY-MM-DD HH:mm:ss';
-function format(v) {
-  return v ? v.format(formatStr) : '';
-}
 
-function isValidRange(v) {
-  return v &amp;&amp; v[0] &amp;&amp; v[1];
-}
-
-function onStandaloneChange(value) {
-  console.log('onChange');
-  console.log(value[0] &amp;&amp; format(value[0]), value[1] &amp;&amp; format(value[1]));
-}
-
-function onStandaloneSelect(value) {
-  console.log('onSelect');
-  console.log(format(value[0]), format(value[1]));
+function disabledDate(current) {
+  if (!current) {
+    // allow empty select
+    return false;
+  }
+  const date = momentJalaali();
+  date.hour(0);
+  date.minute(0);
+  date.second(0);
+  return current.valueOf() &lt; date.valueOf();  // can not select days before today
 }
 
 class Demo extends React.Component {
-  state = {
-    value: [],
-    hoverValue: [],
+  static propTypes = {
+    defaultValue: PropTypes.object,
+    defaultCalendarValue: PropTypes.object,
+  }
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showTime: true,
+      showDateInput: true,
+      disabled: false,
+      value: props.defaultValue,
+    };
   }
 
   onChange = (value) =&gt; {
-    console.log('onChange', value);
-    this.setState({ value });
+    console.log('DatePicker change: ', (value &amp;&amp; value.format(format)));
+    this.setState({
+      value,
+    });
   }
 
-  onHoverChange = (hoverValue) =&gt; {
-    this.setState({ hoverValue });
+  onShowTimeChange = (e) =&gt; {
+    this.setState({
+      showTime: e.target.checked,
+    });
+  }
+
+  onShowDateInputChange = (e) =&gt; {
+    this.setState({
+      showDateInput: e.target.checked,
+    });
+  }
+
+  toggleDisabled = () =&gt; {
+    this.setState({
+      disabled: !this.state.disabled,
+    });
   }
 
   render() {
     const state = this.state;
     const calendar = (
-      &lt;RangeCalendar
-        hoverValue={state.hoverValue}
-        onHoverChange={this.onHoverChange}
-        showWeekNumber={false}
-        dateInputPlaceholder={['start', 'end']}
-        defaultValue={[now, now.clone().add(1, 'months')]}
-        locale={cn ? zhCN : enUS}
-        disabledTime={disabledTime}
-        timePicker={timePickerElement}
+      &lt;Calendar
+        jalaali
+        locale={faIR}
+        style={{ zIndex: 1000 }}
+        dateInputPlaceholder="please input"
+        formatter={getFormat(state.showTime)}
+        disabledTime={state.showTime ? disabledTime : null}
+        timePicker={state.showTime ? timePickerElement : null}
+        defaultValue={this.props.defaultCalendarValue}
+        showDateInput={state.showDateInput}
+        disabledDate={disabledDate}
       /&gt;
     );
     return (
-      &lt;Picker
-        value={state.value}
-        onChange={this.onChange}
-        animation="slide-up"
-        calendar={calendar}
-      &gt;
-        {
-          ({ value }) =&gt; {
-            return (&lt;span&gt;
-                &lt;input
-                  placeholder="please select"
-                  style={{ width: 350 }}
-                  disabled={state.disabled}
-                  readOnly
-                  className="ant-calendar-picker-input ant-input"
-                  value={isValidRange(value) &amp;&amp; `${format(value[0])} - ${format(value[1])}` || ''}
-                /&gt;
-                &lt;/span&gt;);
-          }
-        }
-      &lt;/Picker&gt;);
+      &lt;div style={{ width: 400, margin: 20 }}&gt;
+        &lt;div style={{ marginBottom: 10 }}&gt;
+          &lt;label&gt;
+            &lt;input
+              type="checkbox"
+              checked={state.showTime}
+              onChange={this.onShowTimeChange}
+            /&gt;
+            showTime
+          &lt;/label&gt;
+          &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+          &lt;label&gt;
+            &lt;input
+              type="checkbox"
+              checked={state.showDateInput}
+              onChange={this.onShowDateInputChange}
+            /&gt;
+            showDateInput
+          &lt;/label&gt;
+          &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+          &lt;label&gt;
+            &lt;input
+              checked={state.disabled}
+              onChange={this.toggleDisabled}
+              type="checkbox"
+            /&gt;
+            disabled
+          &lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div style={{
+          boxSizing: 'border-box',
+          position: 'relative',
+          display: 'block',
+          lineHeight: 1.5,
+          marginBottom: 22,
+        }}
+        &gt;
+          &lt;DatePicker
+            animation="slide-up"
+            disabled={state.disabled}
+            calendar={calendar}
+            value={state.value}
+            onChange={this.onChange}
+          &gt;
+            {
+              ({ value }) =&gt; {
+                return (
+                  &lt;span tabIndex="0"&gt;
+                  &lt;input
+                    placeholder="please select"
+                    style={{ width: 250 }}
+                    disabled={state.disabled}
+                    readOnly
+                    tabIndex="-1"
+                    className="ant-calendar-picker-input ant-input"
+                    value={value &amp;&amp; value.format(getFormat(state.showTime)) || ''}
+                  /&gt;
+                  &lt;/span&gt;
+                );
+              }
+            }
+          &lt;/DatePicker&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    );
   }
 }
 
-ReactDOM.render(
-  &lt;div&gt;
-    &lt;h2&gt;calendar&lt;/h2&gt;
-    &lt;div style={{ margin: 10 }}&gt;
-      &lt;RangeCalendar
-        showToday={false}
-        showWeekNumber
-        dateInputPlaceholder={['start', 'end']}
-        locale={cn ? zhCN : enUS}
-        showOk={false}
-        showClear
-        format={formatStr}
-        onChange={onStandaloneChange}
-        onSelect={onStandaloneSelect}
-        disabledDate={disabledDate}
-        timePicker={timePickerElement}
-        disabledTime={disabledTime}
-      /&gt;
-    &lt;/div&gt;
-    &lt;br /&gt;
+function onStandaloneSelect(value) {
+  console.log('onStandaloneSelect');
+  console.log(value &amp;&amp; value.format(format));
+}
 
-    &lt;div style={{ margin: 20 }}&gt;
-      &lt;Demo /&gt;
+function onStandaloneChange(value) {
+  console.log('onStandaloneChange');
+  console.log(value &amp;&amp; value.format(format));
+}
+
+
+ReactDOM.render((
+  &lt;div
+    style={{
+      zIndex: 1000,
+      position: 'relative',
+      width: 900,
+      margin: '20px auto',
+    }}
+  &gt;
+    &lt;div&gt;
+      &lt;div style={{ margin: 10 }}&gt;
+        &lt;Calendar
+          jalaali
+          showWeekNumber={false}
+          locale={faIR}
+          defaultValue={now}
+          disabledTime={disabledTime}
+          showToday
+          formatter={getFormat(true)}
+          showOk={false}
+          timePicker={timePickerElement}
+          onChange={onStandaloneChange}
+          disabledDate={disabledDate}
+          onSelect={onStandaloneSelect}
+        /&gt;
+      &lt;/div&gt;
+      &lt;div style={{ float: 'left', width: 300 }}&gt;
+        &lt;Demo defaultValue={now} /&gt;
+      &lt;/div&gt;
+      &lt;div style={{ float: 'right', width: 300 }}&gt;
+        &lt;Demo defaultCalendarValue={defaultCalendarValue} /&gt;
+      &lt;/div&gt;
+      &lt;div style={{ clear: 'both' }}&gt;&lt;/div&gt;
     &lt;/div&gt;
-  &lt;/div&gt;, document.getElementById('__react-content'));
+  &lt;/div&gt;),
+document.getElementById('__react-content'));
 </code></pre></div>
   </div>
   <a href="https://github.com/saeidalidadi/rj-calendar">
@@ -475,7 +514,7 @@ ReactDOM.render(
   </a>
   <script>FastClick.attach(document.body);</script>
   <script src="../common.js?nowrap"></script>
-  <script src="antd-range-calendar.js?nowrap"></script>
+  <script src="antd-calendar-jalaali.js?nowrap"></script>
 </body>
 
 </html>
