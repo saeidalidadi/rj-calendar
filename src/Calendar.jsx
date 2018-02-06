@@ -16,7 +16,11 @@ function noop() {
 
 function goStartMonth() {
   const next = this.state.value.clone();
-  next.startOf('month');
+  if (this.props.jalaali) {
+    next.startOf('jMonth');
+  } else {
+    next.startOf('month');
+  }
   this.setValue(next);
 }
 
@@ -62,6 +66,7 @@ const Calendar = createReactClass({
     showWeekNumber: PropTypes.bool,
     showToday: PropTypes.bool,
     showOk: PropTypes.bool,
+    jalaali: PropTypes.bool,
     onSelect: PropTypes.func,
     onOk: PropTypes.func,
     onKeyDown: PropTypes.func,
@@ -191,7 +196,7 @@ const Calendar = createReactClass({
   },
   onToday() {
     const { value } = this.state;
-    const now = getTodayTime(value);
+    const now = getTodayTime(value, this.props.jalaali);
     this.onSelect(now, {
       source: 'todayButton',
     });
@@ -217,7 +222,7 @@ const Calendar = createReactClass({
     const {
       locale, prefixCls, disabledDate,
       dateInputPlaceholder, timePicker,
-      disabledTime,
+      disabledTime, jalaali,
     } = props;
     const { value, selectedValue, mode } = state;
     const showTimePicker = mode === 'time';
@@ -247,6 +252,7 @@ const Calendar = createReactClass({
 
     const dateInputElement = props.showDateInput ? (
       <DateInput
+        jalaali={jalaali}
         format={this.getFormat()}
         key="date-input"
         value={value}
@@ -267,6 +273,7 @@ const Calendar = createReactClass({
         {dateInputElement}
         <div className={`${prefixCls}-date-panel`}>
           <CalendarHeader
+            jalaali={jalaali}
             locale={locale}
             mode={mode}
             value={value}
@@ -284,6 +291,7 @@ const Calendar = createReactClass({
             : null}
           <div className={`${prefixCls}-body`}>
             <DateTable
+              jalaali={jalaali}
               locale={locale}
               value={value}
               selectedValue={selectedValue}

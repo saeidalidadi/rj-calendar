@@ -70,7 +70,7 @@ const MonthPanel = createReactClass({
     const cellRender = props.cellRender;
     const contentRender = props.contentRender;
     const locale = props.locale;
-    const year = value.year();
+    const year = props.jalaali ? value.jYear() : value.year();
     const prefixCls = this.prefixCls;
     return (
       <div className={prefixCls} style={props.style}>
@@ -102,6 +102,7 @@ const MonthPanel = createReactClass({
           </div>
           <div className={`${prefixCls}-body`}>
             <MonthTable
+              jalaali={props.jalaali}
               disabledDate={props.disabledDate}
               onSelect={this.setAndSelectValue}
               locale={locale}

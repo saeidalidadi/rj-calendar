@@ -39,6 +39,7 @@ React Calendar
 * support week number
 * support en_US and zh_CN locale(UI), use moment.utcOffset to set timezone
 * support aria and keyboard accessibility
+* Support Jalaali calendar system (partial support)
 
 ### Keyboard
 
@@ -105,6 +106,12 @@ http://react-component.github.io/calendar/examples/index.html
           <td>additional css class of root dom node</td>
         </tr>
         <tr>
+          <td>jalaali</td>
+          <td>Boolean</td>
+          <td></td>
+          <td>to create the calendar with jalaali system</td>
+        </tr>
+        <tr>
           <td>style</td>
           <td>Object</td>
           <td></td>
@@ -138,7 +145,8 @@ http://react-component.github.io/calendar/examples/index.html
           <td>defaultValue</td>
           <td>moment</td>
           <td></td>
-          <td>defaultValue like input's defaultValue</td>
+          <td>defaultValue like input's defaultValue, you should add this if</td>
+          <td>you have been defined `jalaali` as true</td>
         </tr>
         <tr>
           <td>locale</td>

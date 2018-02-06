@@ -41,12 +41,13 @@ export default {
 
   getFormat() {
     let { format } = this.props;
+    const { jalaali } = this.props;
     const { locale, timePicker } = this.props;
     if (!format) {
       if (timePicker) {
-        format = locale.dateTimeFormat;
+        format = jalaali ? locale.jDateTimeFormat : locale.dateTimeFormat;
       } else {
-        format = locale.dateFormat;
+        format = jalaali ? locale.jDateFormat : locale.dateFormat;
       }
     }
     return format;

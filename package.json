@@ -1,7 +1,7 @@
 {
-  "name": "rc-calendar",
+  "name": "rj-calendar",
   "version": "9.5.0",
-  "description": "React Calendar",
+  "description": "React Calendar that supports Jalaali system",
   "keywords": [
     "react",
     "react-calendar",
@@ -19,14 +19,17 @@
   ],
   "main": "lib/index",
   "module": "es/index",
-  "homepage": "http://github.com/react-component/calendar",
-  "author": "yiminghe@gmail.com",
+  "homepage": "https://github.com/saeidalidadi/rj-calendar",
+  "authors": [
+    "yiminghe@gmail.com",
+    "alidadisaeid@gmail.com"
+  ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:react-component/calendar.git"
+    "url": "git@github.com:saeidalidadi/rj-calendar.git"
   },
   "bugs": {
-    "url": "http://github.com/react-component/calendar/issues"
+    "url": "http://github.com/saeidalidadi/rj-calendar/issues"
   },
   "licenses": "MIT",
   "config": {
@@ -87,6 +90,7 @@
     "classnames": "2.x",
     "create-react-class": "^15.5.2",
     "moment": "2.x",
+    "moment-jalaali": "^0.7.2",
     "prop-types": "^15.5.8",
     "rc-trigger": "^2.2.0",
     "rc-util": "^4.1.1"

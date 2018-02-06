@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom';
 import createReactClass from 'create-react-class';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import momentJalaali from 'moment-jalaali';
 
 const DateInput = createReactClass({
   propTypes: {
+    jalaali: PropTypes.bool,
     prefixCls: PropTypes.string,
     timePicker: PropTypes.object,
     value: PropTypes.object,
@@ -51,9 +53,9 @@ const DateInput = createReactClass({
       str,
     });
     let value;
-    const { disabledDate, format, onChange } = this.props;
+    const { disabledDate, format, onChange, jalaali } = this.props;
     if (str) {
-      const parsed = moment(str, format, true);
+      const parsed = jalaali ? momentJalaali(str, format, true) : moment(str, format, true);
       if (!parsed.isValid()) {
         this.setState({
           invalid: true,
@@ -61,13 +63,23 @@ const DateInput = createReactClass({
         return;
       }
       value = this.props.value.clone();
-      value
-        .year(parsed.year())
-        .month(parsed.month())
-        .date(parsed.date())
-        .hour(parsed.hour())
-        .minute(parsed.minute())
-        .second(parsed.second());
+      if (jalaali) {
+        value
+          .jYear(parsed.jYear())
+          .jMonth(parsed.jMonth())
+          .jDate(parsed.jDate())
+          .hour(parsed.hour())
+          .minute(parsed.minute())
+          .second(parsed.second());
+      } else {
+        value
+          .year(parsed.year())
+          .month(parsed.month())
+          .date(parsed.date())
+          .hour(parsed.hour())
+          .minute(parsed.minute())
+          .second(parsed.second());
+      }
 
       if (value && (!disabledDate || !disabledDate(value))) {
         const originalValue = this.props.selectedValue;

@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { getCurrentYear, setYearAndMonth } from '../util/index';
+
 const ROW = 4;
 const COL = 3;
 
@@ -13,9 +15,7 @@ function goYear(direction) {
 }
 
 function chooseYear(year) {
-  const value = this.state.value.clone();
-  value.year(year);
-  value.month(this.state.value.month());
+  const value = setYearAndMonth(this.state.value, year, this.props.jalaali);
   this.props.onSelect(value);
 }
 
@@ -33,7 +33,8 @@ class YearPanel extends React.Component {
 
   years() {
     const value = this.state.value;
-    const currentYear = value.year();
+    const { jalaali } = this.props;
+    const currentYear = getCurrentYear(value, jalaali);
     const startYear = parseInt(currentYear / 10, 10) * 10;
     const previousYear = startYear - 1;
     const years = [];
@@ -58,7 +59,7 @@ class YearPanel extends React.Component {
     const value = this.state.value;
     const locale = props.locale;
     const years = this.years();
-    const currentYear = value.year();
+    const currentYear = getCurrentYear(value, props.jalaali);
     const startYear = parseInt(currentYear / 10, 10) * 10;
     const endYear = startYear + 9;
     const prefixCls = this.prefixCls;
@@ -139,6 +140,7 @@ class YearPanel extends React.Component {
 }
 
 YearPanel.propTypes = {
+  jalaali: PropTypes.bool,
   rootPrefixCls: PropTypes.string,
   value: PropTypes.object,
   defaultValue: PropTypes.object,

@@ -2,11 +2,13 @@
 import React from 'react';
 import keyCode from 'rc-util/lib/KeyCode';
 import moment from 'moment';
+import momentJalaali from 'moment-jalaali';
 import { mount, render } from 'enzyme';
 import TimePickerPanel from 'rc-time-picker/lib/Panel';
 import Calendar from '../src/Calendar';
 import zhCN from '../src/locale/zh_CN';
 import enUS from '../src/locale/en_US';
+import faIR from '../src/locale/fa_IR';
 
 const format = ('YYYY-MM-DD');
 
@@ -22,6 +24,11 @@ describe('Calendar', () => {
         <Calendar locale={enUS} defaultValue={moment('2017-03-29').locale('en')} />
       );
       expect(enWrapper).toMatchSnapshot();
+
+      const faWrapper = render(
+        <Calendar locale={faIR} defaultValue={moment('2018-02-05').locale('fa')} />
+      );
+      expect(faWrapper).toMatchSnapshot();
     });
 
     it('render showToday false correctly', () => {
@@ -519,5 +526,15 @@ describe('Calendar', () => {
     );
     calendar.find('.rc-calendar-today-btn').simulate('click');
     expect(moment().isSame(calendar.state().selectedValue)).toBe(true);
+  });
+
+  describe('Jalaali calendar', () => {
+    it('render as jalaali', () => {
+      momentJalaali.loadPersian({ usePersianDigits: true, dialect: 'persian-modern' });
+      const faWrapper = render(
+        <Calendar jalaali locale={faIR} defaultValue={momentJalaali()} />
+      );
+      expect(faWrapper).toMatchSnapshot();
+    });
   });
 });

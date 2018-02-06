@@ -24,6 +24,7 @@ function showIf(condition, el) {
 
 const CalendarHeader = createReactClass({
   propTypes: {
+    jalaali: PropTypes.bool,
     prefixCls: PropTypes.string,
     value: PropTypes.object,
     onValueChange: PropTypes.func,
@@ -79,6 +80,8 @@ const CalendarHeader = createReactClass({
     const locale = props.locale;
     const value = props.value;
     const localeData = value.localeData();
+    const monthName = props.jalaali ? localeData.jMonths(value) : localeData.monthsShort(value);
+
     const monthBeforeYear = locale.monthBeforeYear;
     const selectClassName = `${prefixCls}-${monthBeforeYear ? 'my-select' : 'ym-select'}`;
     const year = (<a
@@ -87,7 +90,7 @@ const CalendarHeader = createReactClass({
       onClick={showTimePicker ? null : () => this.showYearPanel('date')}
       title={locale.yearSelect}
     >
-      {value.format(locale.yearFormat)}
+      {value.format(props.jalaali ? locale.jYearFormat : locale.yearFormat)}
     </a>);
     const month = (<a
       className={`${prefixCls}-month-select`}
@@ -95,7 +98,7 @@ const CalendarHeader = createReactClass({
       onClick={showTimePicker ? null : this.showMonthPanel}
       title={locale.monthSelect}
     >
-      {localeData.monthsShort(value)}
+      {monthName}
     </a>);
     let day;
     if (showTimePicker) {
@@ -142,12 +145,14 @@ const CalendarHeader = createReactClass({
       enableNext,
       enablePrev,
       disabledMonth,
+      jalaali,
     } = props;
 
     let panel = null;
     if (mode === 'month') {
       panel = (
         <MonthPanel
+          jalaali={jalaali}
           locale={locale}
           defaultValue={value}
           rootPrefixCls={prefixCls}
@@ -162,6 +167,7 @@ const CalendarHeader = createReactClass({
     if (mode === 'year') {
       panel = (
         <YearPanel
+          jalaali={jalaali}
           locale={locale}
           defaultValue={value}
           rootPrefixCls={prefixCls}
@@ -173,6 +179,7 @@ const CalendarHeader = createReactClass({
     if (mode === 'decade') {
       panel = (
         <DecadePanel
+          jalaali={jalaali}
           locale={locale}
           defaultValue={value}
           rootPrefixCls={prefixCls}

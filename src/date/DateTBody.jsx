@@ -31,6 +31,7 @@ function getIdFromDate(date) {
 
 const DateTBody = createReactClass({
   propTypes: {
+    jalaali: PropTypes.bool,
     contentRender: PropTypes.func,
     dateRender: PropTypes.func,
     disabledDate: PropTypes.func,
@@ -52,13 +53,13 @@ const DateTBody = createReactClass({
     const {
       contentRender, prefixCls, selectedValue, value,
       showWeekNumber, dateRender, disabledDate,
-      hoverValue,
+      hoverValue, jalaali,
     } = props;
     let iIndex;
     let jIndex;
     let current;
     const dateTable = [];
-    const today = getTodayTime(value);
+    const today = getTodayTime(value, jalaali);
     const cellClass = `${prefixCls}-cell`;
     const weekNumberCellClass = `${prefixCls}-week-number-cell`;
     const dateClass = `${prefixCls}-date`;
@@ -74,7 +75,11 @@ const DateTBody = createReactClass({
     const firstDisableClass = `${prefixCls}-disabled-cell-first-of-row`;
     const lastDisableClass = `${prefixCls}-disabled-cell-last-of-row`;
     const month1 = value.clone();
-    month1.date(1);
+    if (jalaali) {
+      month1.jDate(1);
+    } else {
+      month1.date(1);
+    }
     const day = month1.day();
     const lastMonthDiffDay = (day + 7 - value.localeData().firstDayOfWeek()) % 7;
     // calculate last month
@@ -101,13 +106,14 @@ const DateTBody = createReactClass({
       let isActiveWeek = false;
       const dateCells = [];
       if (showWeekNumber) {
+        const week = jalaali ? dateTable[passed].jWeek() : dateTable[passed].week();
         weekNumberCell = (
           <td
-            key={dateTable[passed].week()}
+            key={week}
             role="gridcell"
             className={weekNumberCellClass}
           >
-            {dateTable[passed].week()}
+            {week}
           </td>
         );
       }
@@ -199,7 +205,9 @@ const DateTBody = createReactClass({
         if (dateRender) {
           dateHtml = dateRender(current, value);
         } else {
-          const content = contentRender ? contentRender(current, value) : current.date();
+          const date = jalaali ? current.jDate() : current.date();
+          const content = contentRender ? contentRender(current, value) : date;
+
           dateHtml = (
             <div
               key={getIdFromDate(current)}

@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { getCurrentYear, setYearAndMonth } from '../util/index';
+
 const ROW = 4;
 const COL = 3;
 import classnames from 'classnames';
@@ -13,9 +15,7 @@ function goYear(direction) {
 }
 
 function chooseDecade(year, event) {
-  const next = this.state.value.clone();
-  next.year(year);
-  next.month(this.state.value.month());
+  const next = setYearAndMonth(this.state.value, year, this.props.jalaali);
   this.props.onSelect(next);
   event.preventDefault();
 }
@@ -36,8 +36,8 @@ class DecadePanel extends React.Component {
 
   render() {
     const value = this.state.value;
-    const locale = this.props.locale;
-    const currentYear = value.year();
+    const { locale, jalaali } = this.props;
+    const currentYear = getCurrentYear(value, jalaali);
     const startYear = parseInt(currentYear / 100, 10) * 100;
     const preYear = startYear - 10;
     const endYear = startYear + 99;
@@ -127,6 +127,7 @@ class DecadePanel extends React.Component {
 }
 
 DecadePanel.propTypes = {
+  jalaali: PropTypes.bool,
   locale: PropTypes.object,
   value: PropTypes.object,
   defaultValue: PropTypes.object,

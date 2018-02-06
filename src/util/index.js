@@ -1,4 +1,5 @@
 import moment from 'moment';
+import momentJalaali from 'moment-jalaali';
 
 const defaultDisabledTime = {
   disabledHours() {
@@ -12,8 +13,8 @@ const defaultDisabledTime = {
   },
 };
 
-export function getTodayTime(value) {
-  const today = moment();
+export function getTodayTime(value, jalaali) {
+  const today = jalaali ? momentJalaali() : moment();
   today.locale(value.locale()).utcOffset(value.utcOffset());
   return today;
 }
@@ -22,14 +23,34 @@ export function getTitleString(value) {
   return value.format('LL');
 }
 
-export function getTodayTimeStr(value) {
-  const today = getTodayTime(value);
+export function getTodayTimeStr(value, jalaali) {
+  const today = getTodayTime(value, jalaali);
   return getTitleString(today);
 }
 
-export function getMonthName(month) {
+export function setYearAndMonth(value, year, jalaali) {
+  const newValue = value.clone();
+  if (jalaali) {
+    newValue.jYear(year);
+    newValue.jMonth(value.jMonth());
+  } else {
+    newValue.year(year);
+    newValue.month(value.month());
+  }
+
+  return newValue;
+}
+
+export function getCurrentYear(value, jalaali) {
+  return jalaali ? value.jYear() : value.year();
+}
+
+export function getMonthName(month, jalaali) {
   const locale = month.locale();
   const localeData = month.localeData();
+  if (jalaali) {
+    return localeData.jMonths(month);
+  }
   return localeData[locale === 'zh-cn' ? 'months' : 'monthsShort'](month);
 }
 

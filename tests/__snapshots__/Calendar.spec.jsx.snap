@@ -1,5 +1,770 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Calendar Jalaali calendar render as jalaali 1`] = `
+<div
+  class="rc-calendar"
+  tabindex="0"
+>
+  <div
+    class="rc-calendar-panel"
+  >
+    <div
+      class="rc-calendar-input-wrap"
+    >
+      <div
+        class="rc-calendar-date-input-wrap"
+      >
+        <input
+          class="rc-calendar-input "
+          value=""
+        />
+      </div>
+      <a
+        class="rc-calendar-clear-btn"
+        role="button"
+        title="پاک کردن"
+      />
+    </div>
+    <div
+      class="rc-calendar-date-panel"
+    >
+      <div
+        class="rc-calendar-header"
+      >
+        <div
+          style="position:relative"
+        >
+          <a
+            class="rc-calendar-prev-year-btn"
+            role="button"
+            title="سال قبل (Control + left)"
+          />
+          <a
+            class="rc-calendar-prev-month-btn"
+            role="button"
+            title="ماه قبل (PageUp)"
+          />
+          <span
+            class="rc-calendar-my-select"
+          >
+            <a
+              class="rc-calendar-month-select"
+              role="button"
+              title="یک ماه را انتخاب کنید"
+            >
+              فروردین
+            </a>
+            <a
+              class="rc-calendar-year-select"
+              role="button"
+              title="یک سال را انتخاب کنید"
+            >
+              ۱۳۹۶
+            </a>
+          </span>
+          <a
+            class="rc-calendar-next-month-btn"
+            title="ماه بعد (PageDown)"
+          />
+          <a
+            class="rc-calendar-next-year-btn"
+            title="سال بعد (Control + right)"
+          />
+        </div>
+      </div>
+      <div
+        class="rc-calendar-body"
+      >
+        <table
+          cellspacing="0"
+          class="rc-calendar-table"
+          role="grid"
+        >
+          <thead>
+            <tr
+              role="row"
+            >
+              <th
+                class="rc-calendar-column-header"
+                role="columnheader"
+                title="شنبه"
+              >
+                <span
+                  class="rc-calendar-column-header-inner"
+                >
+                  ش
+                </span>
+              </th>
+              <th
+                class="rc-calendar-column-header"
+                role="columnheader"
+                title="یک‌شنبه"
+              >
+                <span
+                  class="rc-calendar-column-header-inner"
+                >
+                  ی
+                </span>
+              </th>
+              <th
+                class="rc-calendar-column-header"
+                role="columnheader"
+                title="دوشنبه"
+              >
+                <span
+                  class="rc-calendar-column-header-inner"
+                >
+                  د
+                </span>
+              </th>
+              <th
+                class="rc-calendar-column-header"
+                role="columnheader"
+                title="سه‌شنبه"
+              >
+                <span
+                  class="rc-calendar-column-header-inner"
+                >
+                  س
+                </span>
+              </th>
+              <th
+                class="rc-calendar-column-header"
+                role="columnheader"
+                title="چهارشنبه"
+              >
+                <span
+                  class="rc-calendar-column-header-inner"
+                >
+                  چ
+                </span>
+              </th>
+              <th
+                class="rc-calendar-column-header"
+                role="columnheader"
+                title="پنج‌شنبه"
+              >
+                <span
+                  class="rc-calendar-column-header-inner"
+                >
+                  پ
+                </span>
+              </th>
+              <th
+                class="rc-calendar-column-header"
+                role="columnheader"
+                title="جمعه"
+              >
+                <span
+                  class="rc-calendar-column-header-inner"
+                >
+                  ج
+                </span>
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            class="rc-calendar-tbody"
+          >
+            <tr
+              class=""
+              role="row"
+            >
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۲۸ اسفند ۱۳۹۵"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  28
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۲۹ اسفند ۱۳۹۵"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  29
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۳۰ اسفند ۱۳۹۵"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  30
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۱ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  1
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۲ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  2
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۳ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  3
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۴ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  4
+                </div>
+              </td>
+            </tr>
+            <tr
+              class="rc-calendar-current-week rc-calendar-active-week"
+              role="row"
+            >
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۵ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  5
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۶ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  6
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۷ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  7
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۸ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  8
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-today rc-calendar-selected-day"
+                role="gridcell"
+                title="۹ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="true"
+                  class="rc-calendar-date"
+                >
+                  9
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۱۰ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  10
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۱۱ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  11
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=""
+              role="row"
+            >
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۱۲ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  12
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۱۳ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  13
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۱۴ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  14
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۱۵ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  15
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۱۶ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  16
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۱۷ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  17
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۱۸ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  18
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=""
+              role="row"
+            >
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۱۹ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  19
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۲۰ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  20
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۲۱ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  21
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۲۲ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  22
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۲۳ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  23
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۲۴ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  24
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۲۵ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  25
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=""
+              role="row"
+            >
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۲۶ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  26
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۲۷ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  27
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۲۸ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  28
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۲۹ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  29
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۳۰ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  30
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۳۱ فروردین ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  31
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۱ اردیبهشت ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  1
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=""
+              role="row"
+            >
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۲ اردیبهشت ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  2
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۳ اردیبهشت ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  3
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۴ اردیبهشت ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  4
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۵ اردیبهشت ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  5
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۶ اردیبهشت ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  6
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۷ اردیبهشت ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  7
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۸ اردیبهشت ۱۳۹۶"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  8
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div
+        class="rc-calendar-footer"
+      >
+        <span
+          class="rc-calendar-footer-btn"
+        >
+          <a
+            class="rc-calendar-today-btn "
+            role="button"
+            title="j۲۹ jمارس j۲۰۱۷"
+          >
+            امروز
+          </a>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Calendar controlled panels render controlled panels correctly 1`] = `
 <div
   class="rc-calendar"
@@ -3448,6 +4213,771 @@ exports[`Calendar render render correctly 2`] = `
             title="March 29, 2017"
           >
             Today
+          </a>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Calendar render render correctly 3`] = `
+<div
+  class="rc-calendar"
+  tabindex="0"
+>
+  <div
+    class="rc-calendar-panel"
+  >
+    <div
+      class="rc-calendar-input-wrap"
+    >
+      <div
+        class="rc-calendar-date-input-wrap"
+      >
+        <input
+          class="rc-calendar-input "
+          value=""
+        />
+      </div>
+      <a
+        class="rc-calendar-clear-btn"
+        role="button"
+        title="پاک کردن"
+      />
+    </div>
+    <div
+      class="rc-calendar-date-panel"
+    >
+      <div
+        class="rc-calendar-header"
+      >
+        <div
+          style="position:relative"
+        >
+          <a
+            class="rc-calendar-prev-year-btn"
+            role="button"
+            title="سال قبل (Control + left)"
+          />
+          <a
+            class="rc-calendar-prev-month-btn"
+            role="button"
+            title="ماه قبل (PageUp)"
+          />
+          <span
+            class="rc-calendar-my-select"
+          >
+            <a
+              class="rc-calendar-month-select"
+              role="button"
+              title="یک ماه را انتخاب کنید"
+            >
+              فوریه
+            </a>
+            <a
+              class="rc-calendar-year-select"
+              role="button"
+              title="یک سال را انتخاب کنید"
+            >
+              ۲۰۱۸
+            </a>
+          </span>
+          <a
+            class="rc-calendar-next-month-btn"
+            title="ماه بعد (PageDown)"
+          />
+          <a
+            class="rc-calendar-next-year-btn"
+            title="سال بعد (Control + right)"
+          />
+        </div>
+      </div>
+      <div
+        class="rc-calendar-body"
+      >
+        <table
+          cellspacing="0"
+          class="rc-calendar-table"
+          role="grid"
+        >
+          <thead>
+            <tr
+              role="row"
+            >
+              <th
+                class="rc-calendar-column-header"
+                role="columnheader"
+                title="شنبه"
+              >
+                <span
+                  class="rc-calendar-column-header-inner"
+                >
+                  ش
+                </span>
+              </th>
+              <th
+                class="rc-calendar-column-header"
+                role="columnheader"
+                title="یک‌شنبه"
+              >
+                <span
+                  class="rc-calendar-column-header-inner"
+                >
+                  ی
+                </span>
+              </th>
+              <th
+                class="rc-calendar-column-header"
+                role="columnheader"
+                title="دوشنبه"
+              >
+                <span
+                  class="rc-calendar-column-header-inner"
+                >
+                  د
+                </span>
+              </th>
+              <th
+                class="rc-calendar-column-header"
+                role="columnheader"
+                title="سه‌شنبه"
+              >
+                <span
+                  class="rc-calendar-column-header-inner"
+                >
+                  س
+                </span>
+              </th>
+              <th
+                class="rc-calendar-column-header"
+                role="columnheader"
+                title="چهارشنبه"
+              >
+                <span
+                  class="rc-calendar-column-header-inner"
+                >
+                  چ
+                </span>
+              </th>
+              <th
+                class="rc-calendar-column-header"
+                role="columnheader"
+                title="پنج‌شنبه"
+              >
+                <span
+                  class="rc-calendar-column-header-inner"
+                >
+                  پ
+                </span>
+              </th>
+              <th
+                class="rc-calendar-column-header"
+                role="columnheader"
+                title="جمعه"
+              >
+                <span
+                  class="rc-calendar-column-header-inner"
+                >
+                  ج
+                </span>
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            class="rc-calendar-tbody"
+          >
+            <tr
+              class=""
+              role="row"
+            >
+              <td
+                class="rc-calendar-cell rc-calendar-last-month-cell"
+                role="gridcell"
+                title="۲۷ ژانویه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  27
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-last-month-cell"
+                role="gridcell"
+                title="۲۸ ژانویه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  28
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-last-month-cell"
+                role="gridcell"
+                title="۲۹ ژانویه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  29
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-last-month-cell"
+                role="gridcell"
+                title="۳۰ ژانویه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  30
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-last-month-cell"
+                role="gridcell"
+                title="۳۱ ژانویه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  31
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۱ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  1
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۲ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  2
+                </div>
+              </td>
+            </tr>
+            <tr
+              class="rc-calendar-active-week"
+              role="row"
+            >
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۳ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  3
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۴ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  4
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-selected-day"
+                role="gridcell"
+                title="۵ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="true"
+                  class="rc-calendar-date"
+                >
+                  5
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۶ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  6
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۷ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  7
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۸ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  8
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۹ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  9
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=""
+              role="row"
+            >
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۱۰ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  10
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۱۱ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  11
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۱۲ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  12
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۱۳ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  13
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۱۴ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  14
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۱۵ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  15
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۱۶ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  16
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=""
+              role="row"
+            >
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۱۷ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  17
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۱۸ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  18
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۱۹ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  19
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۲۰ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  20
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۲۱ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  21
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۲۲ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  22
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۲۳ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  23
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=""
+              role="row"
+            >
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۲۴ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  24
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۲۵ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  25
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۲۶ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  26
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۲۷ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  27
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell"
+                role="gridcell"
+                title="۲۸ فوریه ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  28
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۱ مارس ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  1
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۲ مارس ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  2
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=""
+              role="row"
+            >
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۳ مارس ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  3
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۴ مارس ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  4
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۵ مارس ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  5
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۶ مارس ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  6
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۷ مارس ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  7
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۸ مارس ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  8
+                </div>
+              </td>
+              <td
+                class="rc-calendar-cell rc-calendar-next-month-btn-day"
+                role="gridcell"
+                title="۹ مارس ۲۰۱۸"
+              >
+                <div
+                  aria-disabled="false"
+                  aria-selected="false"
+                  class="rc-calendar-date"
+                >
+                  9
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div
+        class="rc-calendar-footer"
+      >
+        <span
+          class="rc-calendar-footer-btn"
+        >
+          <a
+            class="rc-calendar-today-btn "
+            role="button"
+            title="۲۹ مارس ۲۰۱۷"
+          >
+            امروز
           </a>
         </span>
       </div>

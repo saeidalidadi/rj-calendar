@@ -9,11 +9,12 @@ export default function TodayButton({
   disabled,
   disabledDate,
   onToday,
+  jalaali,
   text,
 }) {
   const localeNow = (!text && timePicker ? locale.now : text) || locale.today;
   const disabledToday =
-          disabledDate && !isAllowedDate(getTodayTime(value), disabledDate);
+          disabledDate && !isAllowedDate(getTodayTime(value, jalaali), disabledDate);
   const isDisabled = disabledToday || disabled;
   const disabledTodayClass = isDisabled ?
           `${prefixCls}-today-btn-disabled` : '';
@@ -22,7 +23,7 @@ export default function TodayButton({
       className={`${prefixCls}-today-btn ${disabledTodayClass}`}
       role="button"
       onClick={isDisabled ? null : onToday}
-      title={getTodayTimeStr(value)}
+      title={getTodayTimeStr(value, jalaali)}
     >
       {localeNow}
     </a>

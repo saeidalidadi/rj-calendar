@@ -43,13 +43,15 @@ class MonthTable extends Component {
   months() {
     const value = this.state.value;
     const current = value.clone();
+    const { jalaali } = this.props;
+
     const months = [];
     let index = 0;
     for (let rowIndex = 0; rowIndex < ROW; rowIndex++) {
       months[rowIndex] = [];
       for (let colIndex = 0; colIndex < COL; colIndex++) {
         current.month(index);
-        const content = getMonthName(current);
+        const content = getMonthName(current, jalaali);
         months[rowIndex][colIndex] = {
           value: index,
           content,
@@ -103,6 +105,7 @@ class MonthTable extends Component {
             </a>
           );
         }
+
         return (
           <td
             role="gridcell"
@@ -131,6 +134,7 @@ MonthTable.defaultProps = {
   onSelect: noop,
 };
 MonthTable.propTypes = {
+  jalaali: PropTypes.bool,
   onSelect: PropTypes.func,
   cellRender: PropTypes.func,
   prefixCls: PropTypes.string,
