@@ -1,7 +1,7 @@
 # rj-calendar
 ---
 
-React Calendar
+React Calendar that supports Jalaali system
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
@@ -12,17 +12,19 @@ React Calendar
 [npm-image]: http://img.shields.io/npm/v/rc-calendar.svg?style=flat-square
 [npm-url]: http://npmjs.org/package/rj-calendar
 [travis-image]: https://img.shields.io/travis/react-component/calendar.svg?style=flat-square
-[travis-url]: https://travis-ci.org/react-component/calendar
+[travis-url]: https://travis-ci.org/saeidalidadi/rj-calendar
 [codecov-image]: https://img.shields.io/codecov/c/github/react-component/calendar/master.svg?style=flat-square
 [codecov-url]: https://codecov.io/gh/react-component/calendar/branch/master
 [gemnasium-image]: http://img.shields.io/gemnasium/react-component/calendar.svg?style=flat-square
-[gemnasium-url]: https://gemnasium.com/react-component/calendar
+[gemnasium-url]: https://gemnasium.com/github.com/saeidalidadi/rj-calendar
 [node-image]: https://img.shields.io/badge/node.js-%3E=_0.10-green.svg?style=flat-square
 [node-url]: http://nodejs.org/download/
 [download-image]: https://img.shields.io/npm/dm/rc-calendar.svg?style=flat-square
 [download-url]: https://npmjs.org/package/rj-calendar
 
 ## Screenshots
+
+<img src="https://goo.gl/GtBQCc" width="288"/>
 
 <img src="https://img.alicdn.com/tps/TB1mYC8KVXXXXaHXXXXXXXXXXXX-566-678.png" width="288"/>
 
@@ -53,7 +55,7 @@ React Calendar
 
 ## install
 
-[![rj-calendar](https://nodei.co/npm/rj-calendar.png)](https://npmjs.org/package/rc-calendar)
+[![rj-calendar](https://nodei.co/npm/rj-calendar.png)](https://npmjs.org/package/rj-calendar)
 
 ## Usage
 
@@ -151,7 +153,7 @@ http://saeidalidadi.github.io/rj-calendar/examples/index.html
         <tr>
           <td>locale</td>
           <td>Object</td>
-          <td>import from 'rc-calendar/lib/locale/en_US'</td>
+          <td>import from 'rj-calendar/lib/locale/en_US'</td>
           <td>calendar locale</td>
         </tr>
         <tr>
@@ -299,7 +301,7 @@ http://saeidalidadi.github.io/rj-calendar/examples/index.html
         <tr>
           <td>locale</td>
           <td>Object</td>
-          <td>import from 'rc-calendar/lib/locale/en_US'</td>
+          <td>import from 'rj-calendar/lib/locale/en_US'</td>
           <td>calendar locale</td>
         </tr>
         <tr>
@@ -464,7 +466,7 @@ http://saeidalidadi.github.io/rj-calendar/examples/index.html
         <tr>
           <td>locale</td>
           <td>Object</td>
-          <td>import from 'rc-calendar/lib/locale/en_US'</td>
+          <td>import from 'rj-calendar/lib/locale/en_US'</td>
           <td>calendar locale</td>
         </tr>
         <tr>
