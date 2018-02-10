@@ -31,10 +31,6 @@ class DateTHead extends React.Component {
         </th>);
     }
 
-    if (props.jalaali) {
-      weekDays.reverse();
-      veryShortWeekdays.reverse();
-    }
     const weekDaysEls = weekDays.map((day, xindex) => {
       return (
         <th

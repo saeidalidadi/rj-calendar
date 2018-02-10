@@ -8,7 +8,11 @@ import DecadePanel from '../decade/DecadePanel';
 
 function goMonth(direction) {
   const next = this.props.value.clone();
-  next.add(direction, 'months');
+  if (this.props.jalaali) {
+    next.add(direction, 'jMonth');
+  } else {
+    next.add(direction, 'months');
+  }
   this.props.onValueChange(next);
 }
 
@@ -25,6 +29,7 @@ function showIf(condition, el) {
 const CalendarHeader = createReactClass({
   propTypes: {
     jalaali: PropTypes.bool,
+    rtl: PropTypes.bool,
     prefixCls: PropTypes.string,
     value: PropTypes.object,
     onValueChange: PropTypes.func,
@@ -134,6 +139,13 @@ const CalendarHeader = createReactClass({
     this.props.onPanelChange(null, 'decade');
   },
 
+  rtlClass(className) {
+    const baseName = `${this.props.prefixCls}-${className}`;
+    if (this.props.rtl) {
+      return `${baseName}-rtl`;
+    }
+    return baseName;
+  },
   render() {
     const { props } = this;
     const {
@@ -187,36 +199,43 @@ const CalendarHeader = createReactClass({
         />
       );
     }
-
+    const prevYearBtn = (
+      <a
+        className={this.rtlClass('prev-year-btn')}
+        role="button"
+        onClick={this.previousYear}
+        title={locale.previousYear}
+      />
+    );
+    const prevMonthBtn = (
+      <a
+        className={this.rtlClass('prev-month-btn')}
+        role="button"
+        onClick={this.previousMonth}
+        title={locale.previousMonth}
+      />
+    );
+    const nextYearBtn = (
+      <a
+        className={this.rtlClass('next-month-btn')}
+        onClick={this.nextMonth}
+        title={locale.nextMonth}
+      />
+    );
+    const nextMonthBtn = (
+      <a
+        className={this.rtlClass('next-year-btn')}
+        onClick={this.nextYear}
+        title={locale.nextYear}
+      />
+    );
     return (<div className={`${prefixCls}-header`}>
       <div style={{ position: 'relative' }}>
-        {showIf(enablePrev && !showTimePicker,
-          <a
-            className={`${prefixCls}-prev-year-btn`}
-            role="button"
-            onClick={this.previousYear}
-            title={locale.previousYear}
-          />)}
-        {showIf(enablePrev && !showTimePicker,
-          <a
-            className={`${prefixCls}-prev-month-btn`}
-            role="button"
-            onClick={this.previousMonth}
-            title={locale.previousMonth}
-          />)}
+        {showIf(enablePrev && !showTimePicker, prevYearBtn)}
+        {showIf(enablePrev && !showTimePicker, prevMonthBtn)}
         {this.monthYearElement(showTimePicker)}
-        {showIf(enableNext && !showTimePicker,
-          <a
-            className={`${prefixCls}-next-month-btn`}
-            onClick={this.nextMonth}
-            title={locale.nextMonth}
-          />)}
-        {showIf(enableNext && !showTimePicker,
-          <a
-            className={`${prefixCls}-next-year-btn`}
-            onClick={this.nextYear}
-            title={locale.nextYear}
-          />)}
+        {showIf(enableNext && !showTimePicker, nextYearBtn)}
+        {showIf(enableNext && !showTimePicker, nextMonthBtn)}
       </div>
       {panel}
     </div>);

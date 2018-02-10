@@ -11,6 +11,13 @@ import 'rc-time-picker/assets/index.css';
 import TimePickerPanel from 'rc-time-picker/lib/Panel';
 import momentJalaali from 'moment-jalaali';
 
+document
+  .getElementsByTagName('html')[0]
+  .setAttribute('dir', 'rtl');
+
+document
+  .getElementsByClassName('highlight')[0]
+  .setAttribute('dir', 'ltr');
 
 momentJalaali.loadPersian({ usePersianDigits: true, dialect: 'persian-modern' });
 
@@ -106,6 +113,7 @@ class Demo extends React.Component {
     const calendar = (
       <Calendar
         jalaali
+        rtl
         locale={faIR}
         style={{ zIndex: 1000 }}
         dateInputPlaceholder="please input"
@@ -147,13 +155,15 @@ class Demo extends React.Component {
             disabled
           </label>
         </div>
-        <div style={{
-          boxSizing: 'border-box',
-          position: 'relative',
-          display: 'block',
-          lineHeight: 1.5,
-          marginBottom: 22,
-        }}
+        <div
+          style={{
+            boxSizing: 'border-box',
+            position: 'relative',
+            display: 'block',
+            lineHeight: 1.5,
+            marginBottom: 22,
+          }}
+          dir="rtl"
         >
           <DatePicker
             animation="slide-up"
@@ -199,6 +209,7 @@ function onStandaloneChange(value) {
 
 ReactDOM.render((
   <div
+    dir="rtl"
     style={{
       zIndex: 1000,
       position: 'relative',
@@ -210,6 +221,7 @@ ReactDOM.render((
       <div style={{ margin: 10 }}>
         <Calendar
           jalaali
+          rtl
           showWeekNumber={false}
           locale={faIR}
           defaultValue={now}
@@ -224,7 +236,7 @@ ReactDOM.render((
         />
       </div>
       <div style={{ float: 'left', width: 300 }}>
-        <Demo defaultValue={now} />
+        <Demo defaultValue={now}/>
       </div>
       <div style={{ float: 'right', width: 300 }}>
         <Demo defaultCalendarValue={defaultCalendarValue} />

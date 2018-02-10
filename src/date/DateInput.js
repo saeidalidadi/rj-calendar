@@ -8,6 +8,7 @@ import momentJalaali from 'moment-jalaali';
 const DateInput = createReactClass({
   propTypes: {
     jalaali: PropTypes.bool,
+    rtl: PropTypes.bool,
     prefixCls: PropTypes.string,
     timePicker: PropTypes.object,
     value: PropTypes.object,
@@ -130,6 +131,7 @@ const DateInput = createReactClass({
     const { invalid, str } = this.state;
     const { locale, prefixCls, placeholder } = props;
     const invalidClass = invalid ? `${prefixCls}-input-invalid` : '';
+    const clearBtnClass = props.rtl ? `${prefixCls}-clear-btn-rtl` : `${prefixCls}-clear-btn`;
     return (<div className={`${prefixCls}-input-wrap`}>
       <div className={`${prefixCls}-date-input-wrap`}>
         <input
@@ -142,7 +144,7 @@ const DateInput = createReactClass({
         />
       </div>
       {props.showClear ? <a
-        className={`${prefixCls}-clear-btn`}
+        className={clearBtnClass}
         role="button"
         title={locale.clear}
         onClick={this.onClear}

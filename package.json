@@ -9,7 +9,9 @@
     "calendar",
     "ui component",
     "ui",
-    "component"
+    "component",
+    "jalaali",
+    "persian calendar"
   ],
   "files": [
     "lib",

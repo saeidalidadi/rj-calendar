@@ -67,6 +67,7 @@ const Calendar = createReactClass({
     showToday: PropTypes.bool,
     showOk: PropTypes.bool,
     jalaali: PropTypes.bool,
+    rtl: PropTypes.bool,
     onSelect: PropTypes.func,
     onOk: PropTypes.func,
     onKeyDown: PropTypes.func,
@@ -222,7 +223,7 @@ const Calendar = createReactClass({
     const {
       locale, prefixCls, disabledDate,
       dateInputPlaceholder, timePicker,
-      disabledTime, jalaali,
+      disabledTime, jalaali, rtl,
     } = props;
     const { value, selectedValue, mode } = state;
     const showTimePicker = mode === 'time';
@@ -253,6 +254,7 @@ const Calendar = createReactClass({
     const dateInputElement = props.showDateInput ? (
       <DateInput
         jalaali={jalaali}
+        rtl={rtl}
         format={this.getFormat()}
         key="date-input"
         value={value}
@@ -274,6 +276,7 @@ const Calendar = createReactClass({
         <div className={`${prefixCls}-date-panel`}>
           <CalendarHeader
             jalaali={jalaali}
+            rtl={rtl}
             locale={locale}
             mode={mode}
             value={value}

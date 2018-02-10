@@ -532,7 +532,11 @@ describe('Calendar', () => {
     it('render as jalaali', () => {
       momentJalaali.loadPersian({ usePersianDigits: true, dialect: 'persian-modern' });
       const faWrapper = render(
-        <Calendar jalaali locale={faIR} defaultValue={momentJalaali()} />
+        <Calendar
+          jalaali
+          locale={faIR}
+          defaultValue={momentJalaali('1396/11/21', 'jYYY/jMM/jDD')}
+        />
       );
       expect(faWrapper).toMatchSnapshot();
     });
@@ -546,29 +550,23 @@ describe('Calendar', () => {
       expect(momentJalaali().isSame(calendar.state().selectedValue)).toBe(true);
     });
 
-    it('Sequence for jalaali system', () => {
+    it('RTL style for calendar elements', () => {
       const selected = momentJalaali();
       momentJalaali.loadPersian({ usePersianDigits: true, dialect: 'persian-modern' });
       const calendar = mount(
         <Calendar
           jalaali
+          rtl
           locale={faIR}
           defaultValue={momentJalaali()}
           defaultSelectedValue={selected}
         />
       );
-      const lastWeekDayShort = calendar.find('.rc-calendar-column-header-inner').first().text();
-      expect(lastWeekDayShort).toBe('ج');
+      const clearBtn = calendar.find('.rc-calendar-clear-btn-rtl');
+      expect(clearBtn.length).toBe(1);
 
-      const firstWeekDayShort = calendar.find('.rc-calendar-column-header-inner').last().text();
-      expect(firstWeekDayShort).toBe('ش');
-
-      calendar.find('.rc-calendar-year-select').simulate('click');
-      const yearRow = calendar.find('.rc-calendar-year-panel-tbody').children().first();
-      const years = yearRow.find('.rc-calendar-year-panel-cell');
-      const leftYear = years.first().find('a').text();
-      const rightYear = years.last().find('a').text();
-      expect(Number(leftYear - 2)).toBe(Number(rightYear));
+      const nextYearBtn = calendar.find('.rc-calendar-next-year-btn-rtl');
+      expect(nextYearBtn.length).toBe(1);
     });
   });
 });

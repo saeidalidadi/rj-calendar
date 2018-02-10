@@ -76,10 +76,10 @@
     }
   }
 
-  &-clear-btn {
+  &-clear-btn,
+  &-clear-btn-rtl {
     z-index: 9999;
     position: absolute;
-    right: 6px;
     cursor: pointer;
     overflow: hidden;
     width: 20px;
@@ -90,7 +90,15 @@
     margin: 0;
   }
 
-  &-clear-btn:after {
+  &-clear-btn {
+    right: 6px;
+  }
+
+  &-clear-btn-rtl {
+    left: 6px;
+  }
+
+  &-clear-btn:after, &-clear-btn-rtl:after {
     content: "x";
     font-size: 12px;
     color: #aaa;

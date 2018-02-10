@@ -95,9 +95,7 @@ class YearPanel extends React.Component {
             </a>
           </td>);
       });
-      if (props.jalaali) {
-        tds.reverse();
-      }
+
       return (<tr key={index} role="row">{tds}</tr>);
     });
 

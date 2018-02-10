@@ -24,7 +24,7 @@ React Calendar that supports Jalaali system
 
 ## Screenshots
 
-<img src="https://goo.gl/GtBQCc" width="288"/>
+<img src="assets/images/jalaali-calendar-screenshot.png" width="288"/>
 
 <img src="https://img.alicdn.com/tps/TB1mYC8KVXXXXaHXXXXXXXXXXXX-566-678.png" width="288"/>
 
@@ -112,6 +112,12 @@ http://saeidalidadi.github.io/rj-calendar/examples/index.html
           <td>Boolean</td>
           <td></td>
           <td>to create the calendar with jalaali system</td>
+        </tr>
+        <tr>
+          <td>rtl</td>
+          <td>Boolean</td>
+          <td></td>
+          <td>to add styles of rtl to calendar elements when container(html) has rtl direction</td>
         </tr>
         <tr>
           <td>style</td>

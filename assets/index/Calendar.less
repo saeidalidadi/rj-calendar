@@ -50,22 +50,38 @@
       }
     }
 
-    .@{prefixClass}-prev-month-btn {
+    .@{prefixClass}-prev-month-btn,
+    .@{prefixClass}-prev-month-btn-rtl {
       position: absolute;
-      left: 25px;
 
       &:after {
         content: '‹'
       }
     }
 
-    .@{prefixClass}-next-month-btn {
-      position: absolute;
+    .@{prefixClass}-prev-month-btn {
+      left: 25px;
+    }
+
+    .@{prefixClass}-prev-month-btn-rtl {
       right: 25px;
+    }
+
+    .@{prefixClass}-next-month-btn,
+    .@{prefixClass}-next-month-btn-rtl {
+      position: absolute;
 
       &:after {
         content: '›'
       }
+    }
+
+    .@{prefixClass}-next-month-btn {
+      right: 25px;
+    }
+
+    .@{prefixClass}-next-month-btn-rtl {
+      left: 25px;
     }
   }
 
@@ -86,7 +102,11 @@
   &-prev-month-btn,
   &-next-month-btn,
   &-prev-year-btn,
-  &-next-year-btn {
+  &-next-year-btn,
+  &-prev-year-btn-rtl,
+  &-next-year-btn-rtl,
+  &-prev-month-btn-rtl,
+  &-next-month-btn-rtl {
     position: absolute;
     top: 0;
     cursor: pointer;
@@ -104,7 +124,14 @@
 
   &-next-year-btn {
     right: 0;
+  }
 
+  &-next-year-btn-rtl {
+    left: 0;
+  }
+
+  &-next-year-btn,
+  &-next-year-btn-rtl {
     &:after {
       content: '»'
     }
@@ -112,7 +139,14 @@
 
   &-prev-year-btn {
     left: 0;
+  }
 
+  &-prev-year-btn-rtl {
+    right: 0;
+  }
+
+  &-prev-year-btn,
+  &-prev-year-btn-rtl {
     &:after {
       content: '«'
     }

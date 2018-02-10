@@ -233,9 +233,7 @@ const DateTBody = createReactClass({
 
         passed++;
       }
-      if (props.jalaali) {
-        dateCells.reverse();
-      }
+
       tableHtml.push(
         <tr
           key={iIndex}
