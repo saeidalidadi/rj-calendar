@@ -44,7 +44,11 @@ function mapSelf(children) {
 
 function goMonth(direction) {
   var next = this.props.value.clone();
-  next.add(direction, 'months');
+  if (this.props.jalaali) {
+    next.add(direction, 'jMonth');
+  } else {
+    next.add(direction, 'months');
+  }
   this.props.onValueChange(next);
 }
 
@@ -63,6 +67,7 @@ var CalendarHeader = __WEBPACK_IMPORTED_MODULE_1_create_react_class___default()(
 
   propTypes: {
     jalaali: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a.bool,
+    rtl: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a.bool,
     prefixCls: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a.string,
     value: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a.object,
     onValueChange: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a.func,
@@ -175,6 +180,13 @@ var CalendarHeader = __WEBPACK_IMPORTED_MODULE_1_create_react_class___default()(
   showDecadePanel: function showDecadePanel() {
     this.props.onPanelChange(null, 'decade');
   },
+  rtlClass: function rtlClass(className) {
+    var baseName = this.props.prefixCls + '-' + className;
+    if (this.props.rtl) {
+      return baseName + '-rtl';
+    }
+    return baseName;
+  },
   render: function render() {
     var _this2 = this;
 
@@ -225,36 +237,39 @@ var CalendarHeader = __WEBPACK_IMPORTED_MODULE_1_create_react_class___default()(
         onSelect: this.onDecadeSelect
       });
     }
-
+    var prevYearBtn = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a', {
+      className: this.rtlClass('prev-year-btn'),
+      role: 'button',
+      onClick: this.previousYear,
+      title: locale.previousYear
+    });
+    var prevMonthBtn = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a', {
+      className: this.rtlClass('prev-month-btn'),
+      role: 'button',
+      onClick: this.previousMonth,
+      title: locale.previousMonth
+    });
+    var nextYearBtn = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a', {
+      className: this.rtlClass('next-month-btn'),
+      onClick: this.nextMonth,
+      title: locale.nextMonth
+    });
+    var nextMonthBtn = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a', {
+      className: this.rtlClass('next-year-btn'),
+      onClick: this.nextYear,
+      title: locale.nextYear
+    });
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
       { className: prefixCls + '-header' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { style: { position: 'relative' } },
-        showIf(enablePrev && !showTimePicker, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a', {
-          className: prefixCls + '-prev-year-btn',
-          role: 'button',
-          onClick: this.previousYear,
-          title: locale.previousYear
-        })),
-        showIf(enablePrev && !showTimePicker, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a', {
-          className: prefixCls + '-prev-month-btn',
-          role: 'button',
-          onClick: this.previousMonth,
-          title: locale.previousMonth
-        })),
+        showIf(enablePrev && !showTimePicker, prevYearBtn),
+        showIf(enablePrev && !showTimePicker, prevMonthBtn),
         this.monthYearElement(showTimePicker),
-        showIf(enableNext && !showTimePicker, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a', {
-          className: prefixCls + '-next-month-btn',
-          onClick: this.nextMonth,
-          title: locale.nextMonth
-        })),
-        showIf(enableNext && !showTimePicker, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a', {
-          className: prefixCls + '-next-year-btn',
-          onClick: this.nextYear,
-          title: locale.nextYear
-        }))
+        showIf(enableNext && !showTimePicker, nextYearBtn),
+        showIf(enableNext && !showTimePicker, nextMonthBtn)
       ),
       panel
     );
@@ -991,9 +1006,7 @@ var YearPanel = function (_React$Component) {
           )
         );
       });
-      if (props.jalaali) {
-        tds.reverse();
-      }
+
       return __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
         'tr',
         { key: index, role: 'row' },
@@ -1205,9 +1218,6 @@ var DecadePanel = function (_React$Component) {
           )
         );
       });
-      if (jalaali) {
-        tds.reverse();
-      }
       return __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
         'tr',
         { key: decadeIndex, role: 'row' },

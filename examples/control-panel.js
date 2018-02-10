@@ -3776,7 +3776,11 @@ var DateTable = function (_React$Component) {
 
 function goMonth(direction) {
   var next = this.props.value.clone();
-  next.add(direction, 'months');
+  if (this.props.jalaali) {
+    next.add(direction, 'jMonth');
+  } else {
+    next.add(direction, 'months');
+  }
   this.props.onValueChange(next);
 }
 
@@ -3795,6 +3799,7 @@ var CalendarHeader = __WEBPACK_IMPORTED_MODULE_1_create_react_class___default()(
 
   propTypes: {
     jalaali: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a.bool,
+    rtl: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a.bool,
     prefixCls: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a.string,
     value: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a.object,
     onValueChange: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a.func,
@@ -3907,6 +3912,13 @@ var CalendarHeader = __WEBPACK_IMPORTED_MODULE_1_create_react_class___default()(
   showDecadePanel: function showDecadePanel() {
     this.props.onPanelChange(null, 'decade');
   },
+  rtlClass: function rtlClass(className) {
+    var baseName = this.props.prefixCls + '-' + className;
+    if (this.props.rtl) {
+      return baseName + '-rtl';
+    }
+    return baseName;
+  },
   render: function render() {
     var _this2 = this;
 
@@ -3957,36 +3969,39 @@ var CalendarHeader = __WEBPACK_IMPORTED_MODULE_1_create_react_class___default()(
         onSelect: this.onDecadeSelect
       });
     }
-
+    var prevYearBtn = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a', {
+      className: this.rtlClass('prev-year-btn'),
+      role: 'button',
+      onClick: this.previousYear,
+      title: locale.previousYear
+    });
+    var prevMonthBtn = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a', {
+      className: this.rtlClass('prev-month-btn'),
+      role: 'button',
+      onClick: this.previousMonth,
+      title: locale.previousMonth
+    });
+    var nextYearBtn = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a', {
+      className: this.rtlClass('next-month-btn'),
+      onClick: this.nextMonth,
+      title: locale.nextMonth
+    });
+    var nextMonthBtn = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a', {
+      className: this.rtlClass('next-year-btn'),
+      onClick: this.nextYear,
+      title: locale.nextYear
+    });
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
       { className: prefixCls + '-header' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { style: { position: 'relative' } },
-        showIf(enablePrev && !showTimePicker, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a', {
-          className: prefixCls + '-prev-year-btn',
-          role: 'button',
-          onClick: this.previousYear,
-          title: locale.previousYear
-        })),
-        showIf(enablePrev && !showTimePicker, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a', {
-          className: prefixCls + '-prev-month-btn',
-          role: 'button',
-          onClick: this.previousMonth,
-          title: locale.previousMonth
-        })),
+        showIf(enablePrev && !showTimePicker, prevYearBtn),
+        showIf(enablePrev && !showTimePicker, prevMonthBtn),
         this.monthYearElement(showTimePicker),
-        showIf(enableNext && !showTimePicker, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a', {
-          className: prefixCls + '-next-month-btn',
-          onClick: this.nextMonth,
-          title: locale.nextMonth
-        })),
-        showIf(enableNext && !showTimePicker, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a', {
-          className: prefixCls + '-next-year-btn',
-          onClick: this.nextYear,
-          title: locale.nextYear
-        }))
+        showIf(enableNext && !showTimePicker, nextYearBtn),
+        showIf(enableNext && !showTimePicker, nextMonthBtn)
       ),
       panel
     );
@@ -4172,10 +4187,6 @@ var DateTHead = function (_React$Component) {
       );
     }
 
-    if (props.jalaali) {
-      weekDays.reverse();
-      veryShortWeekdays.reverse();
-    }
     var weekDaysEls = weekDays.map(function (day, xindex) {
       return __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
         'th',
@@ -4466,9 +4477,7 @@ var DateTBody = __WEBPACK_IMPORTED_MODULE_1_create_react_class___default()({
 
         passed++;
       }
-      if (props.jalaali) {
-        dateCells.reverse();
-      }
+
       tableHtml.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'tr',
         {
@@ -4942,9 +4951,7 @@ var YearPanel = function (_React$Component) {
           )
         );
       });
-      if (props.jalaali) {
-        tds.reverse();
-      }
+
       return __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
         'tr',
         { key: index, role: 'row' },
@@ -5156,9 +5163,6 @@ var DecadePanel = function (_React$Component) {
           )
         );
       });
-      if (jalaali) {
-        tds.reverse();
-      }
       return __WEBPACK_IMPORTED_MODULE_3_react___default.a.createElement(
         'tr',
         { key: decadeIndex, role: 'row' },
@@ -5256,6 +5260,7 @@ var DateInput = __WEBPACK_IMPORTED_MODULE_2_create_react_class___default()({
 
   propTypes: {
     jalaali: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.bool,
+    rtl: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.bool,
     prefixCls: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.string,
     timePicker: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object,
     value: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object,
@@ -5368,6 +5373,7 @@ var DateInput = __WEBPACK_IMPORTED_MODULE_2_create_react_class___default()({
         placeholder = props.placeholder;
 
     var invalidClass = invalid ? prefixCls + '-input-invalid' : '';
+    var clearBtnClass = props.rtl ? prefixCls + '-clear-btn-rtl' : prefixCls + '-clear-btn';
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
       { className: prefixCls + '-input-wrap' },
@@ -5384,7 +5390,7 @@ var DateInput = __WEBPACK_IMPORTED_MODULE_2_create_react_class___default()({
         })
       ),
       props.showClear ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a', {
-        className: prefixCls + '-clear-btn',
+        className: clearBtnClass,
         role: 'button',
         title: locale.clear,
         onClick: this.onClear
@@ -5733,6 +5739,7 @@ var Calendar = __WEBPACK_IMPORTED_MODULE_3_create_react_class___default()({
     showToday: __WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.bool,
     showOk: __WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.bool,
     jalaali: __WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.bool,
+    rtl: __WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.bool,
     onSelect: __WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.func,
     onOk: __WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.func,
     onKeyDown: __WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.func,
@@ -5895,7 +5902,8 @@ var Calendar = __WEBPACK_IMPORTED_MODULE_3_create_react_class___default()({
         dateInputPlaceholder = props.dateInputPlaceholder,
         timePicker = props.timePicker,
         disabledTime = props.disabledTime,
-        jalaali = props.jalaali;
+        jalaali = props.jalaali,
+        rtl = props.rtl;
     var value = state.value,
         selectedValue = state.selectedValue,
         mode = state.mode;
@@ -5925,6 +5933,7 @@ var Calendar = __WEBPACK_IMPORTED_MODULE_3_create_react_class___default()({
 
     var dateInputElement = props.showDateInput ? __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__date_DateInput__["a" /* default */], {
       jalaali: jalaali,
+      rtl: rtl,
       format: this.getFormat(),
       key: 'date-input',
       value: value,
@@ -5947,6 +5956,7 @@ var Calendar = __WEBPACK_IMPORTED_MODULE_3_create_react_class___default()({
         { className: prefixCls + '-date-panel' },
         __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__calendar_CalendarHeader__["a" /* default */], {
           jalaali: jalaali,
+          rtl: rtl,
           locale: locale,
           mode: mode,
           value: value,

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>antd-calendar-jalaali.js - example - rj-calendar@9.6.2</title>
+  <title>antd-calendar-jalaali.js - example - rj-calendar@9.7.0</title>
   <meta name="viewport"
         content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <meta charset="utf-8"/>
@@ -263,7 +263,7 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 <body>
   <div class="container">
     <div class="header">
-      <h1>rj-calendar@9.6.2</h1>
+      <h1>rj-calendar@9.7.0</h1>
 
       <p>React Calendar that supports Jalaali system</p>
     </div>
@@ -282,6 +282,13 @@ import 'rc-time-picker/assets/index.css';
 import TimePickerPanel from 'rc-time-picker/lib/Panel';
 import momentJalaali from 'moment-jalaali';
 
+document
+  .getElementsByTagName('html')[0]
+  .setAttribute('dir', 'rtl');
+
+document
+  .getElementsByClassName('highlight')[0]
+  .setAttribute('dir', 'ltr');
 
 momentJalaali.loadPersian({ usePersianDigits: true, dialect: 'persian-modern' });
 
@@ -377,6 +384,7 @@ class Demo extends React.Component {
     const calendar = (
       &lt;Calendar
         jalaali
+        rtl
         locale={faIR}
         style={{ zIndex: 1000 }}
         dateInputPlaceholder="please input"
@@ -418,13 +426,15 @@ class Demo extends React.Component {
             disabled
           &lt;/label&gt;
         &lt;/div&gt;
-        &lt;div style={{
-          boxSizing: 'border-box',
-          position: 'relative',
-          display: 'block',
-          lineHeight: 1.5,
-          marginBottom: 22,
-        }}
+        &lt;div
+          style={{
+            boxSizing: 'border-box',
+            position: 'relative',
+            display: 'block',
+            lineHeight: 1.5,
+            marginBottom: 22,
+          }}
+          dir="rtl"
         &gt;
           &lt;DatePicker
             animation="slide-up"
@@ -470,6 +480,7 @@ function onStandaloneChange(value) {
 
 ReactDOM.render((
   &lt;div
+    dir="rtl"
     style={{
       zIndex: 1000,
       position: 'relative',
@@ -481,6 +492,7 @@ ReactDOM.render((
       &lt;div style={{ margin: 10 }}&gt;
         &lt;Calendar
           jalaali
+          rtl
           showWeekNumber={false}
           locale={faIR}
           defaultValue={now}
@@ -495,7 +507,7 @@ ReactDOM.render((
         /&gt;
       &lt;/div&gt;
       &lt;div style={{ float: 'left', width: 300 }}&gt;
-        &lt;Demo defaultValue={now} /&gt;
+        &lt;Demo defaultValue={now}/&gt;
       &lt;/div&gt;
       &lt;div style={{ float: 'right', width: 300 }}&gt;
         &lt;Demo defaultCalendarValue={defaultCalendarValue} /&gt;

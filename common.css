@@ -75,10 +75,10 @@
 .rc-calendar-input-invalid {
   border-color: red;
 }
-.rc-calendar-clear-btn {
+.rc-calendar-clear-btn,
+.rc-calendar-clear-btn-rtl {
   z-index: 9999;
   position: absolute;
-  right: 6px;
   cursor: pointer;
   overflow: hidden;
   width: 20px;
@@ -88,7 +88,14 @@
   top: 6px;
   margin: 0;
 }
-.rc-calendar-clear-btn:after {
+.rc-calendar-clear-btn {
+  right: 6px;
+}
+.rc-calendar-clear-btn-rtl {
+  left: 6px;
+}
+.rc-calendar-clear-btn:after,
+.rc-calendar-clear-btn-rtl:after {
   content: "x";
   font-size: 12px;
   color: #aaa;
@@ -360,19 +367,33 @@
   cursor: pointer;
   color: #23c0fa;
 }
-.rc-calendar-header .rc-calendar-prev-month-btn {
+.rc-calendar-header .rc-calendar-prev-month-btn,
+.rc-calendar-header .rc-calendar-prev-month-btn-rtl {
   position: absolute;
-  left: 25px;
 }
-.rc-calendar-header .rc-calendar-prev-month-btn:after {
+.rc-calendar-header .rc-calendar-prev-month-btn:after,
+.rc-calendar-header .rc-calendar-prev-month-btn-rtl:after {
   content: '\2039';
 }
-.rc-calendar-header .rc-calendar-next-month-btn {
-  position: absolute;
+.rc-calendar-header .rc-calendar-prev-month-btn {
+  left: 25px;
+}
+.rc-calendar-header .rc-calendar-prev-month-btn-rtl {
   right: 25px;
 }
-.rc-calendar-header .rc-calendar-next-month-btn:after {
+.rc-calendar-header .rc-calendar-next-month-btn,
+.rc-calendar-header .rc-calendar-next-month-btn-rtl {
+  position: absolute;
+}
+.rc-calendar-header .rc-calendar-next-month-btn:after,
+.rc-calendar-header .rc-calendar-next-month-btn-rtl:after {
   content: '\203A';
+}
+.rc-calendar-header .rc-calendar-next-month-btn {
+  right: 25px;
+}
+.rc-calendar-header .rc-calendar-next-month-btn-rtl {
+  left: 25px;
 }
 .rc-calendar-year-select,
 .rc-calendar-month-select,
@@ -393,7 +414,11 @@
 .rc-calendar-prev-month-btn,
 .rc-calendar-next-month-btn,
 .rc-calendar-prev-year-btn,
-.rc-calendar-next-year-btn {
+.rc-calendar-next-year-btn,
+.rc-calendar-prev-year-btn-rtl,
+.rc-calendar-next-year-btn-rtl,
+.rc-calendar-prev-month-btn-rtl,
+.rc-calendar-next-month-btn-rtl {
   position: absolute;
   top: 0;
   cursor: pointer;
@@ -407,19 +432,31 @@
 .rc-calendar-prev-month-btn:hover,
 .rc-calendar-next-month-btn:hover,
 .rc-calendar-prev-year-btn:hover,
-.rc-calendar-next-year-btn:hover {
+.rc-calendar-next-year-btn:hover,
+.rc-calendar-prev-year-btn-rtl:hover,
+.rc-calendar-next-year-btn-rtl:hover,
+.rc-calendar-prev-month-btn-rtl:hover,
+.rc-calendar-next-month-btn-rtl:hover {
   color: #23c0fa;
 }
 .rc-calendar-next-year-btn {
   right: 0;
 }
-.rc-calendar-next-year-btn:after {
+.rc-calendar-next-year-btn-rtl {
+  left: 0;
+}
+.rc-calendar-next-year-btn:after,
+.rc-calendar-next-year-btn-rtl:after {
   content: '\BB';
 }
 .rc-calendar-prev-year-btn {
   left: 0;
 }
-.rc-calendar-prev-year-btn:after {
+.rc-calendar-prev-year-btn-rtl {
+  right: 0;
+}
+.rc-calendar-prev-year-btn:after,
+.rc-calendar-prev-year-btn-rtl:after {
   content: '\AB';
 }
 .rc-calendar-body {
