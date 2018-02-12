@@ -181,7 +181,11 @@ var CalendarHeader = __WEBPACK_IMPORTED_MODULE_1_create_react_class___default()(
     var value = props.value;
     var localeData = value.localeData();
     var monthName = props.jalaali ? localeData.jMonths(value) : localeData.monthsShort(value);
-
+    if (props.jalaali) {
+      monthName = locale.jMonthFormat ? value.format(locale.jMonthFormat) : localeData.jMonths(value);
+    } else {
+      monthName = locale.monthFormat ? value.format(locale.monthFormat) : localeData.monthsShort(value);
+    }
     var monthBeforeYear = locale.monthBeforeYear;
     var selectClassName = prefixCls + '-' + (monthBeforeYear ? 'my-select' : 'ym-select');
     var year = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -2181,6 +2185,7 @@ var Picker = __WEBPACK_IMPORTED_MODULE_2_create_react_class___default()({
         align = props.align,
         animation = props.animation,
         disabled = props.disabled,
+        dropdownClassName = props.dropdownClassName,
         transitionName = props.transitionName,
         children = props.children;
 
@@ -2200,7 +2205,8 @@ var Picker = __WEBPACK_IMPORTED_MODULE_2_create_react_class___default()({
         popupTransitionName: transitionName,
         popupVisible: state.open,
         onPopupVisibleChange: this.onVisibleChange,
-        prefixCls: prefixCls
+        prefixCls: prefixCls,
+        popupClassName: dropdownClassName
       },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.cloneElement(children(state, props), { onKeyDown: this.onKeyDown })
     );
