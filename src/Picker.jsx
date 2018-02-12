@@ -193,6 +193,7 @@ const Picker = createReactClass({
       style, getCalendarContainer,
       align, animation,
       disabled,
+      dropdownClassName,
       transitionName, children,
     } = props;
     const state = this.state;
@@ -210,6 +211,7 @@ const Picker = createReactClass({
       popupVisible={state.open}
       onPopupVisibleChange={this.onVisibleChange}
       prefixCls={prefixCls}
+      popupClassName={dropdownClassName}
     >
       {React.cloneElement(children(state, props), { onKeyDown: this.onKeyDown })}
     </Trigger>);

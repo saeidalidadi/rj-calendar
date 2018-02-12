@@ -29,6 +29,15 @@ describe('Calendar', () => {
         <Calendar locale={faIR} defaultValue={moment('2018-02-05').locale('fa')} />
       );
       expect(faWrapper).toMatchSnapshot();
+
+      const customEnUSLocalWithMonthFormat = { ...enUS, monthFormat: 'MMMM' };
+      const enWrapperWithMonthFormatWrapper = render(
+        <Calendar
+          locale={customEnUSLocalWithMonthFormat}
+          defaultValue={moment('2017-03-29').local('en')}
+        />
+      );
+      expect(enWrapperWithMonthFormatWrapper).toMatchSnapshot();
     });
 
     it('render showToday false correctly', () => {

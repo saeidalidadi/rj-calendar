@@ -1,5 +1,18 @@
 # History
 ----
+
+## 9.8.0 / 2018-02-08
+
+- Add Picker[dropdownClassName]
+
+## 9.7.0 / 2018-02-08
+
+- Rtl support for rtl documents.
+
+## 9.6.0 / 2018-02-06
+
+- Add Jalaali system to Calendar
+
 ## 9.5.0 / 2017-12-26
 
 - Add Kurdish

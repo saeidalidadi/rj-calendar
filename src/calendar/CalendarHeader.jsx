@@ -85,8 +85,16 @@ const CalendarHeader = createReactClass({
     const locale = props.locale;
     const value = props.value;
     const localeData = value.localeData();
-    const monthName = props.jalaali ? localeData.jMonths(value) : localeData.monthsShort(value);
-
+    let monthName = props.jalaali ? localeData.jMonths(value) : localeData.monthsShort(value);
+    if (props.jalaali) {
+      monthName = locale.jMonthFormat
+                  ? value.format(locale.jMonthFormat)
+                  : localeData.jMonths(value);
+    } else {
+      monthName = locale.monthFormat
+                  ? value.format(locale.monthFormat)
+                  : localeData.monthsShort(value);
+    }
     const monthBeforeYear = locale.monthBeforeYear;
     const selectClassName = `${prefixCls}-${monthBeforeYear ? 'my-select' : 'ym-select'}`;
     const year = (<a
