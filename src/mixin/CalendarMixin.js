@@ -2,21 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import moment from 'moment';
+import momentJalaali from 'moment-jalaali';
 import { isAllowedDate, getTodayTime } from '../util/index';
 
 function noop() {
 }
 
-function getNow() {
-  return moment();
+function getNow(jalaali = false) {
+  return jalaali ? momentJalaali() : moment();
 }
 
-function getNowByCurrentStateValue(value) {
+function getNowByCurrentStateValue(value, jalaali = false) {
   let ret;
   if (value) {
-    ret = getTodayTime(value);
+    ret = getTodayTime(value, jalaali);
   } else {
-    ret = getNow();
+    ret = getNow(jalaali);
   }
   return ret;
 }
@@ -36,7 +37,7 @@ const CalendarMixin = {
 
   getInitialState() {
     const props = this.props;
-    const value = props.value || props.defaultValue || getNow();
+    const value = props.value || props.defaultValue || getNow(props.jalaali);
     return {
       value,
       selectedValue: props.selectedValue || props.defaultSelectedValue,
@@ -45,9 +46,13 @@ const CalendarMixin = {
 
   componentWillReceiveProps(nextProps) {
     let { value } = nextProps;
+    const { jalaali } = nextProps;
     const { selectedValue } = nextProps;
     if ('value' in nextProps) {
-      value = value || nextProps.defaultValue || getNowByCurrentStateValue(this.state.value);
+      value = value
+        || nextProps.defaultValue
+        || getNowByCurrentStateValue(this.state.value, jalaali);
+
       this.setState({
         value,
       });

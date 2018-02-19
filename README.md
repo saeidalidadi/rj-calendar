@@ -1,4 +1,5 @@
 # rj-calendar
+
 ---
 
 React Calendar that supports Jalaali system
@@ -60,9 +61,9 @@ React Calendar that supports Jalaali system
 ## Usage
 
 ```js
-import Calendar from 'rj-calendar';
-import React from 'react';
-import ReactDOM from 'react-dom';
+import Calendar from "rj-calendar";
+import React from "react";
+import ReactDOM from "react-dom";
 ReactDOM.render(<Calendar />, container);
 ```
 
@@ -153,8 +154,7 @@ http://saeidalidadi.github.io/rj-calendar/examples/index.html
           <td>defaultValue</td>
           <td>moment</td>
           <td></td>
-          <td>defaultValue like input's defaultValue, you should add this if</td>
-          <td>you have been defined `jalaali` as true</td>
+          <td>defaultValue like input's defaultValue</td>
         </tr>
         <tr>
           <td>locale</td>

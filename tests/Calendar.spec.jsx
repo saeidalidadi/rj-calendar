@@ -559,6 +559,13 @@ describe('Calendar', () => {
       expect(momentJalaali().isSame(calendar.state().selectedValue)).toBe(true);
     });
 
+    it('uses moment jalaali if default value not defiend in props', () => {
+      const calendar = mount(
+        <Calendar jalaali />
+      );
+      expect(calendar.render()).toMatchSnapshot();
+    });
+
     it('RTL style for calendar elements', () => {
       const selected = momentJalaali();
       momentJalaali.loadPersian({ usePersianDigits: true, dialect: 'persian-modern' });
